@@ -51,7 +51,7 @@ $Twelve:12px;
                 height:4px;
                 position:absolute;
                 top:16px;
-                right:355px;
+                right:346px;
                 background:url(../img/All_bg.gif) no-repeat -252px -30px;
             }
             span{
@@ -83,7 +83,7 @@ $Twelve:12px;
         z-index:1;
         display:none;
         position:absolute;
-        right:346px;
+        right:338px;
         width:79px;
         border:1px solid #dcdcdc;
         border-top:none;
@@ -318,6 +318,7 @@ $Twelve:12px;
     position:relative;
     width:100%;
     height:400px;
+    margin-bottom:6px;
     .bg{
         position: absolute;
         top:0;
@@ -404,24 +405,26 @@ $Twelve:12px;
     position:absolute;
     top:163px;
     left:32px;
-    background:#f8f8f8;
     width:230px;
-    height:616px;
+    // height:616px;
+    border-left:1px solid #e7e7e7;;
     dl{
-        width:228px;
+        width:230px;
         position: relative;
-        border:1px solid #e7e7e7;
-        border-top:none;
         dt{
-            padding:20px 0 11px 18px;
+            background:#f8f8f8;
+            position: relative;
+            padding:12px 0 11px 18px;
+            border:1px solid #e7e7e7;
+            border-top:none;
             border-top:1px solid transparent;
             border-left:2px solid transparent;
             &:hover{
+                z-index: 2;
                 border-top:1px solid #bdbdbd;
-                border-bottom-color: #bdbdbd;
+                border-bottom:1px solid #bdbdbd;
                 border-left:2px solid #00adff;
-                border-right-color:transparent;
-                background:$White;
+                border-right:1px solid transparent;
             }
             strong{
                 position: relative;
@@ -451,6 +454,179 @@ $Twelve:12px;
                 width:6px;
                 height:9px;
                 background: url(../img/All_bg.gif) no-repeat -310px -30px;
+            }
+        }
+        .panel{
+            display: none;
+            position: absolute;
+            top: -150%;
+            left: 229px;
+            width:650px;
+            background:$White;
+            border: 1px solid #bdbdbd;
+            ul{
+                width:380px;
+                padding:0 20px;
+                float: left;
+                li{
+                    border-bottom:1px dashed #cccccc;
+                    padding:10px 0;
+                    overflow:hidden;
+                    strong{
+                        width:70px;
+                        font-size: $Twelve;
+                        float:left;
+                        margin-top:5px;
+                        a{
+                            color:#444444;
+                        }
+                    }
+                    .product{
+                        font-size: $Twelve;
+                        line-height:22px;
+                        margin-left:70px;
+                        a{
+                            color:$T_color;
+                            margin-right:14px;
+                            &:hover{
+                                color:#0098e0;
+                            }
+                        }
+                    }
+                }
+            }
+            .hot{
+                float:right;
+                width:200px;
+                background:#f8f8f8;
+                padding:15px;
+                margin-bottom:7px;
+                h4{
+                    font-size: $Twelve;
+                    color:$T_color;
+                    line-height: 30px;
+                    border-bottom: 1px solid $T_color;
+                }
+                ul{
+                    margin-top:10px;
+                    margin-bottom:10px;
+                    width:200px;
+                    padding:0;
+                    li{
+                        float:left;
+                        width:100px;
+                        margin:0;
+                        padding:0;
+                        border-bottom:none;
+                        a{
+                            display:inline-block;
+                            font-size: $Twelve;
+                            color:$T_color; 
+                            line-height: 22px;
+                            &:hover{
+                                color:#0098e0;
+                            }
+                        }
+                        .red{
+                            color:#ff1a3a !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*banner_bottom*/
+.voice{
+    margin-left:272px;
+    margin-bottom:8px;
+    background:url(../img/All_bg.gif) no-repeat -409px -30px;
+    a{
+        vertical-align: text-bottom;
+        font-size: $Twelve;
+        color:$T_color;
+        line-height:19px;
+        margin-left:25px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.pic{
+    margin-left:272px;
+    margin-bottom:30px;
+    a{
+        img{
+            margin-right:10px;
+        }
+    }
+}
+/*limit_buy*/
+.limit_buy{
+    width:100%;
+    .middle{
+        width:$Width;
+        margin:0 auto;
+        .word{
+            width:100%;
+            padding-bottom:8px;
+            border-bottom:2px solid #ff8c8f;
+            margin-bottom:10px;
+        }
+        a{
+            position: relative;
+            display:block;
+            width:287px;
+            height:400px;
+            border:1px solid #e4e4e4;
+            padding:1px;
+            &:hover{
+                border-color: #fd1d5b;
+            }
+            .clock{
+                width:214px;
+                height:38px;
+                line-height: 38px;
+                padding-left:73px;
+                font-size: $Twelve;
+                color:$T_color;
+                background:#f8f7f5 url(../img/clock.jpg) no-repeat 33px 5px;
+                b{
+                    strong{
+                        font-size: 20px;
+                        color:#ff1a3a;
+                        margin-right:5px;
+                    }
+                }
+            }
+            img{
+                width:260px;
+                height:260px;
+                margin:13px;
+            }
+            .article{
+                font-size: $Twelve;
+                color:$T_color;
+                padding:0 13px;
+            }
+            .price{
+                position:absolute;
+                top:362px;
+                left:-1px;
+                width:271px;
+                height:55px;
+                font-size:18px;
+                color:$White;
+                padding-top:10px;
+                padding-left:20px;
+                background:url(../img/buy.jpg) no-repeat;
+                span{
+                    font-size:30px;
+                    font-weight:bold;
+                }
+            }
+            .buy{
+
             }
         }
     }
