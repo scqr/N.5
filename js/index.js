@@ -9,8 +9,11 @@
             oCode    = $('.code'),
             oCenterUl = $('.center ul'),
             oRight    = $('.right'),
-            oNone     = $('.none')
-            oBtn      = $('#btn');
+            oNone     = $('.none'),
+            oBtn      = $('#btn'),
+			oChooseDl    = $('.choose dl'),
+			oListDt = $('#list dt'),
+            oListPanel   = $('#list .panel');
 
             let iTimer = null;
 
@@ -21,6 +24,14 @@
                 oAccount.css('borderColor', '#dcdcdc');
                 let iIndex = oAccount.index($(this));
                 oMe.css('display', 'none').eq(iIndex).css('display', 'block');
+            });
+            oAccount.on('mouseleave', function () {
+                clearTimeout(iTimer);
+                iTimer = setTimeout(function () {
+                    oAccount.css('backgroundColor','transparent');
+                    oAccount.css('borderColor', 'transparent');
+                    oMe.css('display', 'none');
+                });
             });
             oMe.hover(function () {
                 clearTimeout(iTimer);
@@ -80,5 +91,25 @@
 
             //轮播图
             $('.carousel').carousel({interval: 3000});
+
+            //选项卡
+            oChooseDl.on('mouseenter', function () {
+                clearTimeout(iTimer);
+                let iIndex = oChooseDl.index($(this));
+                oListDt.css('background', '#f8f8f8').eq(iIndex).css('background', '#ffffff');
+                oListPanel.css('display', 'none').eq(iIndex).css('display', 'block');
+            });
+            oChooseDl.on('mouseleave', function () {
+                iTimer = setTimeout(function () {
+                    oListDt.css('background', '#f8f8f8');
+                    oListPanel.css('display', 'none');
+                }, 50);
+            });
+            oListPanel.hover(function () {
+                clearTimeout(iTimer);
+            }, function () {
+                let iIndex = oChooseDl.index($(this));
+                oListDt.eq(iIndex).css('background', '#ffffff');
+            });
     });
 })(jQuery);
