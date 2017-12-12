@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NO5时尚广场:中国领先的专业化妆品网站-13年品质保证</title>
+    <!-- <link rel="import" href="common.html"/> -->
     <link rel="stylesheet" href="dist/index.css"/>
     <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
     <script src="js/index.js"></script>
     <script src="js/carousel.js"></script>
 </head>
 <body>
+    <!-- fix -->
+    <div id="fs-toolbar1" class="kfbox">
+        <dl class="top" style="visibility: visible;">
+            <dt></dt>
+            <dd>顶部</dd>
+        </dl>
+        <dl class="kf">
+            <dt></dt>
+            <dd>客服</dd>
+        </dl>
+    </div>
     <!-- top -->
     <div class="top">
         <div class="middle">
@@ -30,7 +42,7 @@
             <div class="left"><a href="javascript:;"><img src="img/logo.jpg"/></a></div>
             <div class="center">
                 <div class="search-frame">
-                    <input type="text" value="面膜" autocomplete="off"/><strong>搜索</strong>
+                    <input type="text" value="面膜" autocomplete="off" onfocus="javascript:if(this.value=='面膜'){this.value='';};" onblur="javascript:if(this.value.length==0){this.value='面膜';};"/><strong>搜索</strong>
                     <a href="javascript:;">&times;</a>
                 </div>
                 <div class="search">
@@ -92,7 +104,7 @@
                 <a href="javascript:;"><img src="img/banner_b1.jpg"/></a>
             </div>
             <div class="banner1">
-                <div class="pic"><a href="javascript:;"><img src="img/banner1.jpg"/></a><a href="javascript:;"><img src="img/banner1_2.jpg"/></a><a href="javascript:;"><img src="img/banner1_3.jpg"/></a></div> -->
+                <div class="pic"><a href="javascript:;"><img src="img/banner1.jpg"/></a><a href="javascript:;"><img src="img/banner1_2.jpg"/></a><a href="javascript:;"><img src="img/banner1_3.jpg"/></a></div>
                 <div class="pic pic1"><a href="javascript:;"><img src="img/banner2.jpg"/></a><a href="javascript:;"><img src="img/banner2_2.jpg"/></a><a href="javascript:;"><img src="img/banner2_3.jpg"/></a></div>
             </div>
             <ul id="btn">
@@ -1163,17 +1175,17 @@
             <div class="care">
                 <img src="img/skin.jpg" />
                 <p>
-                    <a href="javascript:;" class="red">倩碧三部曲
+                    <a href="javascript:;" class="red">倩碧三部曲</a>
                     <span></span>
-                    <a href="javascript:;">小黑瓶
+                    <a href="javascript:;">小黑瓶</a>
                     <span></span>
-                    <a href="javascript:;">卸妆油
+                    <a href="javascript:;">卸妆油</a>
                     <span></span>
-                    <a href="javascript:;" class="red">补水保湿
+                    <a href="javascript:;" class="red">补水保湿</a>
                     <span></span>
-                    <a href="javascript:;">保湿面膜
+                    <a href="javascript:;">保湿面膜</a>
                     <span></span>
-                    <a href="javascript:;">小棕瓶
+                    <a href="javascript:;">小棕瓶</a>
                     <span></span>
                     <a href="javascript:;">红石榴</a>
                 </p>
@@ -1220,8 +1232,544 @@
                         </p>
                     </div>
                 </div>
+                <div class="skin_right">
+                    <h2>护肤热销</h2>
+                    <ul>
+                        <li class="move m">
+                            <span class="toplist"><span class="num">1</span>雅诗兰黛净莹柔肤洁面乳</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/skin_7.jpg" width="176" height="160"/></a><a href="javascript:;">雅诗兰黛净莹柔肤洁面乳</a><span class="price">￥35</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">2</span>Clinique 倩碧滋养修护眼霜</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/skin_8.jpg" width="176" height="160"/></a><a href="javascript:;">Clinique 倩碧滋养修护眼霜</a><span class="price">￥218</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">3</span>SK-II/SK2/skii 护肤精华露(神仙水07007) 160ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/skin_9.jpg" width="176" height="160"/></a><a href="javascript:;">SK-II/SK2/skii 护肤精华露(神仙水07007) 160ml</a><span class="price">￥908</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">4</span>Clinique 倩碧匀净卓研淡斑双效精华露</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/skin_10.jpg" width="176" height="160"/></a><a href="javascript:;">Clinique 倩碧匀净卓研淡斑双效精华露</a><span class="price">￥438</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">5</span>Avene 雅漾舒护活泉水-喷雾中喷 150ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/skin_11.jpg" width="176" height="160"/></a><a href="javascript:;">Avene 雅漾舒护活泉水-喷雾中喷 150ml</a><span class="price">￥95</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">6</span>九朵云奇迹马油霜</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/skin_12.jpg" width="176" height="160"/></a><a href="javascript:;">九朵云奇迹马油霜</a><span class="price">￥85</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skin_log">
+                <a href="javascript:;"><img src="img/skin_logo_1.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_2.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_3.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_4.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_5.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_6.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_7.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_8.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_9.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_10.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_11.jpg" /></a>
+                <a href="javascript:;"><img src="img/skin_logo_12.jpg" /></a>
             </div>
         </div>
     </div>
+    <!-- make_up -->
+    <div class="skin">
+        <div class="middle">
+            <div class="care">
+                <img src="img/make_up.jpg" />
+                <p>
+                    <a href="javascript:;">气垫BB霜</a>
+                    <span></span>
+                    <a href="javascript:;" class="red">粉饼</a>
+                    <span></span>
+                    <a href="javascript:;">指甲油</a>
+                    <span></span>
+                    <a href="javascript:;">睫毛膏</a>
+                    <span></span>
+                    <a href="javascript:;">眼影</a>
+                    <span></span>
+                    <a href="javascript:;" class="red">口红</a>
+                    <span></span>
+                    <a href="javascript:;">迪奥</a>
+                </p>
+            </div>
+            <div class="skin_middle">
+                <div class="skin_one"><a href="javascript:;"><img src="img/make_up_1.jpg" /></a></div>
+                <div class="skin_two">
+                    <ul>
+                        <li><a href="javascript:;"><img src="img/make_up_2.jpg" width="180" height="180" /></a></li>
+                        <li>
+                            <a class="b e" href="javascript:;">Estee Lauder雅诗兰黛</a><br/>
+                            <a class="b d" href="javascript:;">持久完美粉底气垫BB粉饼</a><br/>
+                            <a class="c" href="javascript:;">控油持妆 隐匿毛孔</a>
+                            <p>￥<strong>355.<span>00</span></strong><span>（8.5折）</span></p>
+                        </li>
+                    </ul>
+                    <ul class="T_2">
+                        <li><a href="javascript:;"><img src="img/make_up_3.jpg" width="180" height="180" /></a></li>
+                        <li>
+                            <a class="b e" href="javascript:;">Shiseido资生堂</a><br/>
+                            <a class="b d" href="javascript:;">透润隔离霜/妆前乳 SS霜</a><br/>
+                            <a class="c" href="javascript:;">多效防护 抵御紫外线 改善暗沉 轻盈保湿</a>
+                            <p>￥<strong>299.<span>00</span></strong><span>（7.7折）</span></p>
+                        </li>
+                    </ul>
+                    <div class="low">
+                        <p>
+                            <a class="f" href="javascript:;">妙巴黎天鹅绒唇彩釉</a><br/>
+                            <a class="g" href="javascript:;">液态唇膏 有漆光般效果</a>
+                            <i>￥<strong>99.<span>00</span></strong><span>（6.7折）</span></i>
+                            <a href="javascript:;"><img src="img/make_up_4.jpg" width="180" height="180" /></a>
+                        </p>
+                        <p>
+                            <a class="f" href="javascript:;">赫拉赫妍高魅惑丰彩口红</a><br/>
+                            <a class="g" href="javascript:;">全智贤同款人鱼色</a>
+                            <i>￥<strong>229.<span>00</span></strong><span>（4.6折）</span></i>
+                            <a href="javascript:;"><img src="img/make_up_5.jpg" width="180" height="180" /></a>
+                        </p>
+                        <p class="last">
+                            <a class="f" href="javascript:;">canmake井田立体三色眉粉</a><br/>
+                            <a class="g" href="javascript:;">粉质细腻 容易上色</a>
+                            <i>￥<strong>55.<span>00</span></strong><span>（7.1折）</span></i>
+                            <a href="javascript:;"><img src="img/make_up_6.jpg" width="180" height="180" /></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="skin_right">
+                    <h2>彩妆热销</h2>
+                    <ul>
+                        <li class="move m">
+                            <span class="toplist"><span class="num">1</span>Lancome 兰蔻柔皙轻透防晒露SPF50 PA+++(464217)「轻呼吸」防护露 50ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/make_up_7.jpg" width="176" height="160"/></a><a href="javascript:;">Lancome 兰蔻柔皙轻透防晒露SPF50 PA+++(464217)「轻呼吸」防护露 50ml</a><span class="price">￥388</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">2</span>SKIN FOOD 思亲肤巧克力双色眉粉2#(灰褐10426) 4g</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/make_up_8.jpg" width="176" height="160"/></a><a href="javascript:;">SKIN FOOD 思亲肤巧克力双色眉粉2#(灰褐10426) 4g</a><span class="price">￥35</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">3</span>HR 赫莲娜FELINE BLACKS猎豹防水睫毛膏(84722) 7.2ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/make_up_9.jpg" width="176" height="160"/></a><a href="javascript:;">HR 赫莲娜FELINE BLACKS猎豹防水睫毛膏(84722) 7.2ml</a><span class="price">￥245</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">4</span>爱敬age 20's水光精华水粉膏/气垫BB霜SPF50+ PA+++（粉盒21#象牙白278512） 12.5g*2</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/make_up_10.jpg" width="176" height="160"/></a><a href="javascript:;">爱敬age 20's水光精华水粉膏/气垫BB霜SPF50+ PA+++（粉盒21#象牙白278512） 12.5g*2</a><span class="price">￥188</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">5</span>Shu uemura 植村秀多色之涂防水眼线笔(M01墨黑) 1.2g</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/make_up_11.jpg" width="176" height="160"/></a><a href="javascript:;">Shu uemura 植村秀多色之涂防水眼线笔(M01墨黑) 1.2g</a><span class="price">￥148</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">6</span>Giorgio Armani 阿玛尼臻致丝绒哑光唇釉/唇彩/唇蜜(红管唇釉508#982743)烟粉色带珠光 6.5ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/make_up_12.jpg" width="176" height="160"/></a><a href="javascript:;">Giorgio Armani 阿玛尼臻致丝绒哑光唇釉/唇彩/唇蜜(红管唇釉508#982743)烟粉色带珠光 6.5ml</a><span class="price">￥235</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skin_log">
+                <a href="javascript:;"><img src="img/make_up_logo_1.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_2.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_3.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_4.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_5.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_6.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_7.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_8.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_9.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_10.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_11.jpg" /></a>
+                <a href="javascript:;"><img src="img/make_up_logo_12.jpg" /></a>
+            </div>
+        </div>
+    </div>
+    <!-- perfume -->
+    <div class="skin">
+        <div class="middle">
+            <div class="care">
+                <img src="img/perfume.jpg" />
+                <p>
+                    <a href="javascript:;" class="red">Dior</a>
+                    <span></span>
+                    <a href="javascript:;">香奈儿</a>
+                    <span></span>
+                    <a href="javascript:;">女士香水</a>
+                    <span></span>
+                    <a href="javascript:;">男士香水</a>
+                    <span></span>
+                    <a href="javascript:;">套装</a>
+                    <span></span>
+                    <a href="javascript:;">Q版</a>
+                </p>
+            </div>
+            <div class="skin_middle">
+                <div class="perfume_left"><a href="javascript:;"><img width="326" height="480" src="img/perfume_1.jpg" /></a></div>
+                <div class="perfume_center">
+                    <div class="center_top"><a href="javascipt:;"><img src="img/perfume_2.jpg" /></a></div>
+                    <div class="center_bottom">
+                        <a href="javascript:;" class="q"><img src="img/perfume_3.jpg"/></a><a href="javascript:;"><img src="img/perfume_4.jpg"/></a>
+                    </div>
+                </div>
+                <div class="perfume_right"><a href="javascript:;"><img src="img/perfume_5.jpg" /></a></div>
+                <div class="skin_right">
+                    <h2>香水热销</h2>
+                    <ul>
+                        <li class="move m">
+                            <span class="toplist"><span class="num">1</span>KENZO 凯卓/高田贤三纯净之水女士淡香水EDT(水之恋) 30ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/perfume_6.jpg" width="176" height="160"/></a><a href="javascript:;">KENZO 凯卓/高田贤三纯净之水女士淡香水EDT(水之恋) 30ml</a><span class="price">￥172</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">2</span>Elizabeth Arden 雅顿第五大道女士香水 75ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/perfume_7.jpg" width="176" height="160"/></a><a href="javascript:;">Elizabeth Arden 雅顿第五大道女士香水 75ml</a><span class="price">￥145</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">3</span>Burberry 博柏利(巴宝莉)情缘男士香水 30ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/perfume_8.jpg" width="176" height="160"/></a><a href="javascript:;">HR 赫莲娜FELINE BLACKS猎豹防水睫毛膏(84722) 7.2ml</a><span class="price">￥141</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">4</span>LANVIN 浪凡光韵女士香氛/香水EDP 4.5ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/perfume_9.jpg" width="176" height="160"/></a><a href="javascript:;">LANVIN 浪凡光韵女士香氛/香水EDP 4.5ml</a><span class="price">￥48</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">5</span>Lancome 兰蔻Miracle奇迹女士香氛/香水EDP(02940) 30ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/perfume_10.jpg" width="176" height="160"/></a><a href="javascript:;">Lancome 兰蔻Miracle奇迹女士香氛/香水EDP(02940) 30ml</a><span class="price">￥278</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">6</span>Dior 迪奥毒药女孩女士香水(粉毒)293839 50ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/perfume_11.jpg" width="176" height="160"/></a><a href="javascript:;">Dior 迪奥毒药女孩女士香水(粉毒)293839 50ml</a><span class="price">￥510</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skin_log">
+                <a href="javascript:;"><img src="img/perfume_logo_1.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_2.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_3.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_4.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_5.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_6.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_7.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_8.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_9.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_10.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_11.jpg" /></a>
+                <a href="javascript:;"><img src="img/perfume_logo_12.jpg" /></a>
+            </div>
+        </div>
+    </div>
+    <!-- man -->
+    <div class="skin">
+        <div class="middle">
+            <div class="care">
+                <img src="img/man_.jpg" />
+                <p>
+                    <a href="javascript:;">剃须</a>
+                    <span></span>
+                    <a href="javascript:;" class="red">碧欧泉男士</a>
+                    <span></span>
+                    <a href="javascript:;">控油祛痘</a>
+                    <span></span>
+                    <a href="javascript:;">洁面膏</a>
+                    <span></span>
+                    <a href="javascript:;">Zippo</a>
+                    <span></span>
+                    <a href="javascript:;">瑞士军刀</a>
+                </p>
+            </div>
+            <div class="skin_middle">
+                <div class="man_left">
+                    <div class="man_left_top">
+                        <p class="man_left_top1"><a href="javascript:;"><img src="img/man_1.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">碧欧泉男士水动力保湿乳</a><span>￥238.00<i>（5折）</i></span></p>
+                        <p class="man_left_top1"><a href="javascript:;"><img src="img/man_2.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">资生堂男士优效紧致眼霜</a><span>￥328.00<i>（8折）</i></span></p>
+                        <p class="man_left_top1 man_left_top2"><a href="javascript:;"><img src="img/man_3.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">碧欧泉男士净肤细致清洁面膜</a><span>￥225.00<i>（7.8折）</i></span></p>
+                    </div>
+                    <div class="man_left_top">
+                        <p class="man_left_top1 w"><a href="javascript:;"><img src="img/man_4.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">碧欧泉男士滋养紧肤精华水</a><span>￥428.00<i>（7.6折）</i></span></p>
+                        <p class="man_left_top1 w"><a href="javascript:;"><img src="img/man_5.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">倩碧男士保湿精华露48ml</a><span>￥266.00<i>（6.8折）</i></span></p>
+                        <p class="man_left_top1 man_left_top2 w"><a href="javascript:;"><img src="img/man_6.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">资生堂UNO男士活性炭洁面膏</a><span>￥42.00<i>（6.5折）</i></span></p>
+                    </div>
+                </div>
+                <div class="man_middle"><a href="javascript:;"><img src="img/man_7.jpg" width="344" height="480"></a></div>
+                <div class="skin_right">
+                    <h2>男士热销</h2>
+                    <ul>
+                        <li class="move m">
+                            <span class="toplist"><span class="num">1</span>倩碧男士净彻爽肤水</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/man_8.jpg" width="176" height="160"/></a><a href="javascript:;">倩碧男士净彻爽肤水</a><span class="price">￥148</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">2</span>Kiehl’s 科颜氏(契尔氏)男士活力爽肤水(07706) 250ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/man_9.jpg" width="176" height="160"/></a><a href="javascript:;">Kiehl’s 科颜氏(契尔氏)男士活力爽肤水(07706) 250ml</a><span class="price">￥208</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">3</span>Lancome 兰蔻男仕塑颜面霜(30412)男士 50ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/man_10.jpg" width="176" height="160"/></a><a href="javascript:;">Lancome 兰蔻男仕塑颜面霜(30412)男士 50ml</a><span class="price">￥478</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">4</span>Whoo后 拱辰享君泡沫洁面膏/洗面奶(853896) 180ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/man_11.jpg" width="176" height="160"/></a><a href="javascript:;">Whoo后 拱辰享君泡沫洁面膏/洗面奶(853896) 180ml</a><span class="price">￥230</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">5</span>Biotherm 碧欧泉男士清爽防晒隔离霜SPF50 PA+++ 30ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/man_12.jpg" width="176" height="160"/></a><a href="javascript:;">Biotherm 碧欧泉男士清爽防晒隔离霜SPF50 PA+++ 30ml</a><span class="price">￥275</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">6</span>碧欧泉男士净肤细致清洁面膜</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/man_13.jpg" width="176" height="160"/></a><a href="javascript:;">碧欧泉男士净肤细致清洁面膜</a><span class="price">￥205</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skin_log">
+                <a href="javascript:;"><img src="img/man_logo_1.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_2.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_3.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_4.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_5.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_6.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_7.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_8.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_9.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_10.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_11.jpg" /></a>
+                <a href="javascript:;"><img src="img/man_logo_12.jpg" /></a>
+            </div>
+        </div>
+    </div>
+    <!-- body -->
+    <div class="skin">
+        <div class="middle">
+            <div class="care">
+                <img src="img/body_.jpg" />
+                <p>
+                    <a href="javascript:;" class="red">护手霜</a>
+                    <span></span>
+                    <a href="javascript:;">洗发护发</a>
+                    <span></span>
+                    <a href="javascript:;">丰胸</a>
+                    <span></span>
+                    <a href="javascript:;">润体乳</a>
+                    <span></span>
+                    <a href="javascript:;">防脱发</a>
+                    <span></span>
+                    <a href="javascript:;">沐浴</a>
+                    <span></span>
+                    <a href="javascript:;">染发</a>
+                </p>
+            </div>
+            <div class="skin_middle">
+                <div class="man_middle"><a href="javascript:;"><img src="img/body_1.jpg" width="344" height="480"></a></div>
+                <div class="man_left">
+                    <div class="man_left_top">
+                        <p class="man_left_top1"><a href="javascript:;"><img src="img/body_2.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">爱茉莉美仙玫瑰橄榄蜂蜜精油</a><span>￥65.00<i>（7.6折）</i></span></p>
+                        <p class="man_left_top1"><a href="javascript:;"><img src="img/body_3.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">卡诗头皮系列去屑净化洗发水</a><span>￥168.00<i>（7折）</i></span></p>
+                        <p class="man_left_top1 man_left_top2"><a href="javascript:;"><img src="img/body_4.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">日本柳屋YANAGIYA发根营养液</a><span>￥85.00<i>（7.1折）</i></span></p>
+                    </div>
+                    <div class="man_left_top">
+                        <p class="man_left_top1 w"><a href="javascript:;"><img src="img/body_5.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">美源发采882#(棕黑色)</a><span>￥65.00<i>（6.8折）</i></span></p>
+                        <p class="man_left_top1 w"><a href="javascript:;"><img src="img/body_6.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">爱茉莉 吕Ryo固发防脱洗发水</a><span>￥58.00<i>（6.6折）</i></span></p>
+                        <p class="man_left_top1 man_left_top2 w"><a href="javascript:;"><img src="img/body_7.jpg" width="180" height="180"></a><a class="man_word" href="javascript:;">卡诗双重菁纯轻润喷雾油100ml</a><span>￥298.00<i>（7.1折）</i></span></p>
+                    </div>
+                </div>
+                <div class="skin_right">
+                    <h2>洗护热销</h2>
+                    <ul>
+                        <li class="move m">
+                            <span class="toplist"><span class="num">1</span>LG 润膏洗护二合一/洗发水(15443) 250ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/body_8.jpg" width="176" height="160"/></a><a href="javascript:;">LG 润膏洗护二合一/洗发水(15443) 250ml</a><span class="price">￥68</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">2</span>Mane'n tail 箭牌经典控油洗发水(54321) 355ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/body_9.jpg" width="176" height="160"/></a><a href="javascript:;">Mane'n tail 箭牌经典控油洗发水(54321) 355ml</a><span class="price">￥59</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">3</span>Elizabeth Arden 雅顿绿茶香氛润肤乳 500ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/body_10.jpg" width="176" height="160"/></a><a href="javascript:;">Elizabeth Arden 雅顿绿茶香氛润肤乳 500ml</a><span class="price">￥63</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">4</span>SpongeBob海绵宝宝 多元海藻呵护洗沐二合一(海绵宝宝3D40301) 500ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/body_11.jpg" width="176" height="160"/></a><a href="javascript:;">SpongeBob海绵宝宝 多元海藻呵护洗沐二合一(海绵宝宝3D40301) 500ml</a><span class="price">￥68</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">5</span>Kerastase 卡诗头皮系列双重功能洗发水 250ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/body_12.jpg" width="176" height="160"/></a><a href="javascript:;">Kerastase 卡诗头皮系列双重功能洗发水 250ml</a><span class="price">￥198</span></div>
+                        </li>
+                        <li class="move">
+                            <span class="toplist"><span class="num">6</span>L’Occitane  欧舒丹5合1草本精华修护洗发露(无硅油洗发水27133) 300ml</span>
+                            <div class="hover" id="mov"><a href="javascript:;"><img src="img/body_13.jpg" width="176" height="160"/></a><a href="javascript:;">L’Occitane  欧舒丹5合1草本精华修护洗发露(无硅油洗发水27133) 300ml</a><span class="price">￥153</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skin_log">
+                <a href="javascript:;"><img src="img/body_logo_1.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_2.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_3.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_4.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_5.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_6.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_7.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_8.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_9.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_10.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_11.jpg" /></a>
+                <a href="javascript:;"><img src="img/body_logo_12.jpg" /></a>
+            </div>
+        </div>
+    </div>
+    <!-- add -->
+    <div class="add">
+        <div class="middle">
+            <div class="add_left">
+                <h2><a href="javascript:;">美容咨询</a></h2>
+                <div class="add_left_left">
+                    <a href="javascript:;"><img src="img/add_1.png" width="250" height="330"/></a>
+                    <p class="title">根据场合选择防晒指数 这些新品帮你度过夏天</p>
+                    <p class="article">很多女生在夏天最担心的一件事就是晒黑了，而这些今年春夏新出的防晒新品，...<a href="javascript:;">[查看更多]</a></p>
+                </div>
+                <ul class="add_left_right">
+                    <li>
+                        <a href="javascript:;"><img src="img/add_2.png" width="154" height="118"/></a>
+                        <p class="title"><span>香水</span>上万种香水类型 据说只有1%的人会选</p>
+                        <p class="article">性感女人的标志除了恨天高，就是香水了。常在圈里混，撞衫撞脸已不新鲜，现在最新潮的就是“撞香”。跟美女撞了，叫高逼格有品位，跟豪放大妈...<a href="javascript:;">[详细]</a></p>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/add_3.png" width="154" height="118"/></a>
+                        <p class="title"><span>护肤</span>谁再说脂肪粒是因为眼霜 本宝宝要生气了</p>
+                        <p class="article">我身边经常会有妹子说：我觉得这个眼霜实在是太油了，用了之后眼周起了好多脂肪粒，我要拉黑它！亲人们，你们眼周长的脂肪粒真的是因为眼霜吗...<a href="javascript:;">[详细]</a></p>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/add_4.png" width="154" height="118"/></a>
+                        <p class="title"><span>彩妆</span>根据肤质选隔离 你到底适合用什么？</p>
+                        <p class="article">讲真，隔离霜满大街都是，便宜的有百元内的，贵的有近千元的。到底什么样的隔离霜才真的适合你？...<a href="javascript:;">[详细]</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="add_right">
+                <h2>编辑推荐</h2>
+                <ul class="add_right_ul">
+                    <li>
+                        <div class="all">
+                            <a href="javascript:;" class="article">AUPRES欧珀莱 男士俊士JS眼部沁凉滚珠精华液/眼霜 15ml</a>
+                            <a href="javascript:;" class="title"><span>编辑推荐：</span>用了这款没多久，感觉眼袋跟黑眼圈的问题缓解了不少</a>
+                        </div>
+                        <a href="javascript:;"><img src="img/add_5.jpg" width="80" height="80"/></a>
+                    </li>
+                    <li>
+                        <div class="all">
+                            <a href="javascript:;" class="article">Kiehl’s 科颜氏(契尔氏)亚马逊白泥净致面膜(03813) 本周特价! 125ml</a>
+                            <a href="javascript:;" class="title"><span>编辑推荐：</span>标准的125ml容量~简洁明了的瓶身~跟广告上面一模一样</a>
+                        </div>
+                        <a href="javascript:;"><img src="img/add_6.jpg" width="80" height="80"/></a>
+                    </li>
+                    <li>
+                        <div class="all">
+                            <a href="javascript:;" class="article">HR 赫莲娜FELINE BLACKS猎豹防水睫毛膏(84722) 7.2ml</a>
+                            <a href="javascript:;" class="title"><span>编辑推荐：</span>卷翘度也好，根根分明，防水力不错</a>
+                        </div>
+                        <a href="javascript:;"><img src="img/add_7.jpg" width="80" height="80"/></a>
+                    </li>
+                    <li class="last">
+                        <div class="all">
+                            <a href="javascript:;" class="article">Biotherm 碧欧泉修颜平肤隔离霜SPF50+/PA++(紫色CC霜83751) 30ml</a>
+                            <a href="javascript:;" class="title"><span>编辑推荐：</span>非常满意。用过好多品种的牌子，这种最满意，保湿滋润美白</a>
+                        </div>
+                        <a href="javascript:;"><img src="img/add_8.jpg" width="80" height="80"/></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- phone -->
+    <div class="phone">
+        <div class="middle">
+            <div class="phone_num">
+                <div class="phone_num_top">
+                    <p class="num_top">010-51666655</p>
+                    <p class="num_top1">9:00-18:00</p>
+                </div>
+                <p class="weibo">新浪官方微博<a href="javascript:;"><img src="img/phone_focus.jpg"/></a></p>
+                <p class="read">
+                    <input type="text" value="请输入您的Email地址" onfocus="javascript:if(this.value=='请输入您的Email地址'){this.value='';};" onblur="javascript:if(this.value.length==0){this.value='请输入您的Email地址';};">
+                    <a href="javascript:;"><img src="img/phone_read.jpg" /></a>
+                </p>
+                <p class="ps">最新美容资讯，新品及促销信息</p>
+            </div>
+            <dl class="howto h">
+                <dt><a href="javascript:;" target="_blank">如何订购</a></dt>
+                <dd><a href="javascript:;" target="_blank">网上下单</a></dd>
+                <dd><a href="javascript:;" target="_blank">电话订购</a></dd>
+                <dd><a href="javascript:;" target="_blank">邮寄订购</a></dd>
+                <dd><a href="javascript:;" target="_blank">传真订购</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="javascript:;" target="_blank">如何送货</a></dt>
+                <dd><a href="javascript:;" target="_blank">送货上门</a></dd>
+                <dd><a href="javascript:;" target="_blank">快递</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="javascript:;" target="_blank">如何付款</a></dt>
+                <dd><a href="javascript:;" target="_blank">货到付款</a></dd>
+                <dd><a href="javascript:;" target="_blank">在线支付</a></dd>
+                <dd><a href="javascript:;" target="_blank">邮政汇款</a></dd>
+                <dd><a href="javascript:;" target="_blank">银行汇款</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="javascript:;" target="_blank">订单查询</a></dt>
+                <dd><a href="javascript:;" target="_blank">订单状态</a></dd>
+                <dd><a href="javascript:;" target="_blank">查询订单</a></dd>
+                <dd><a href="javascript:;" target="_blank">无效订单</a></dd>
+                <dd><a href="javascript:;" target="_blank">支付失败</a></dd>
+                <dd><a href="javascript:;" target="_blank">缺货登记</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="javascript:;" target="_blank">会员服务</a></dt>
+                <dd><a href="javascript:;" target="_blank">N°5会员级别</a></dd>
+                <dd><a href="javascript:;" target="_blank">N°5购物保障</a></dd>
+                <dd><a href="javascript:;" target="_blank">N°5贴心服务</a></dd>
+                <dd><a href="javascript:;" target="_blank">账户积分使用</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="javascript:;" target="_blank">联系我们</a></dt>
+                <dd><a href="javascript:;" target="_blank">关于N°5</a></dd>
+                <dd><a href="javascript:;" target="_blank">加入N°5</a></dd>
+                <dd><a href="javascript:;" target="_blank">团购加盟</a></dd>
+                <dd><a href="javascript:;" target="_blank">网站加盟</a></dd>
+                <dd><a href="javascript:;" target="_blank">投诉</a><a href="javascript:;" target="_blank">建议</a></dd>
+            </dl>
+            <div class="wei"><img src="http://photo.no5.com.cn/page_2014/images/2wm.jpg"></div>
+        </div>
+    </div>
+    <!-- foot -->
+    <div class="foot">
+        <div class="middle">
+            <dl class="fb">
+                <dt><img src="img/foot_1.jpg"/></dt>
+                <dd>足不出户  享受网购乐趣</dd>
+                <dd>北京城区次日送达</dd>
+            </dl>
+            <dl class="fb">
+                <dt><img src="img/foot_2.jpg"/></dt>
+                <dd>品质保证</dd>
+                <dd>15天不满意退换货</dd>
+            </dl>
+            <dl class="fb">
+                <dt><img src="img/foot_3.jpg"/></dt>
+                <dd>价格实惠  购物有积分</dd>
+                <dd>积分抵现金</dd>
+            </dl>
+            <dl class="fb">
+                <dt><img src="img/foot_4.jpg"/></dt>
+                <dd>1800多城市送货上门</dd>
+                <dd>货到付款</dd>
+            </dl>
+        </div>
+    </div>
+    <!-- footer -->
+    <p class="footer">Copyright @ 2001-2012 N°5.com.cn All Rights Reserved 京ICP备11045170号</p>
 </body>
 </html>
