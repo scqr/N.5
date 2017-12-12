@@ -31,7 +31,7 @@
                     oAccount.css('backgroundColor','transparent');
                     oAccount.css('borderColor', 'transparent');
                     oMe.css('display', 'none');
-                });
+                }, 50);
             });
             oMe.hover(function () {
                 clearTimeout(iTimer);
@@ -144,5 +144,30 @@
                 $('#uls li').removeClass('hover').eq(iIndex).addClass('hover');
                 $('.act').css('display', 'none').eq(iIndex).css('display', 'block');
             });
+
+            //手风琴
+            // $('.move .toplist').bind('mouseenter', function () {
+            //     let iIndex = $('.move').index();
+            //     $('.move').removeClass('m').eq(iIndex).addClass('m');
+            // });
+
+            //吸顶
+            // $(function(){
+            //     var TIMER;//定义全局变量
+            //     $(window).scroll( function() {
+            //         clearTimeout(TIMER);//必须要有这句
+            //         if( $(document).scrollTop() > 783 ){
+            //             TIMER = setTimeout(function(){
+            //                 $(this).addClass("nav");
+            //                 // console.log($(document).scrollTop());
+            //             },100);
+            //         }else{
+            //             TIMER = setTimeout(function(){
+            //                 $(this).removeClass("nav");
+            //             },100);
+            //         }
+            //     });
+            // });
+
     });
 })(jQuery);
