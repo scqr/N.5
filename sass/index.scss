@@ -1491,6 +1491,10 @@ $Twelve:12px;
                             font-size: $Twelve;
                             color:#999999;
                             line-height: 18px;
+                            &:hover{
+                                color:#c80f2f;
+                                text-decoration: underline;
+                            }
                             span{
                                 color:#c80f2f;
                                 font-weight: bold;

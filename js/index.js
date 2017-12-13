@@ -90,7 +90,7 @@
             });
 
             //轮播图
-            $('.carousel').carousel({interval: 3000});
+            $('.carousel').carousel({interval: 3000});  
 
             //纵向选项卡
             oChooseDl.on('mouseenter', function () {
