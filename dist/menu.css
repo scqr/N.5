@@ -817,17 +817,21 @@ strong, b {
             display: block;
             font-size: 12px;
             color: #666666;
-            line-height: 18px; }
+            line-height: 18px;
+            height: 36px;
+            overflow: hidden; }
             .detail .middle .detail_right .detail_goods .detail_demo .word:hover {
               color: #ff1a3a;
               text-decoration: underline; }
-          .detail .middle .detail_right .detail_goods .detail_demo p {
+          .detail .middle .detail_right .detail_goods .detail_demo i {
+            display: block;
             margin-top: 10px;
             margin-bottom: 3px;
             font-size: 18px;
             color: #ff1a3a;
-            font-weight: bold; }
-            .detail .middle .detail_right .detail_goods .detail_demo p span {
+            font-weight: bold;
+            font-style: normal; }
+            .detail .middle .detail_right .detail_goods .detail_demo i span {
               font-size: 12px;
               font-weight: normal; }
           .detail .middle .detail_right .detail_goods .detail_demo p {
@@ -852,6 +856,47 @@ strong, b {
               border: 1px solid #dfdfdf;
               height: 22px;
               line-height: 22px; }
+      .detail .middle .detail_right .inner {
+        float: right;
+        margin-top: 20px; }
+        .detail .middle .detail_right .inner span {
+          float: left;
+          height: 20px;
+          padding: 2px 10px;
+          border: 1px solid #ccc;
+          margin-left: 2px;
+          line-height: 20px;
+          font-size: 12px;
+          overflow: hidden;
+          color: #005aa0;
+          background: #fff; }
+        .detail .middle .detail_right .inner .disa-btn {
+          color: #ccc;
+          cursor: default; }
+        .detail .middle .detail_right .inner a {
+          float: left;
+          height: 20px;
+          padding: 2px 10px;
+          border: 1px solid #ccc;
+          margin-left: 2px;
+          line-height: 20px;
+          font-size: 12px;
+          overflow: hidden;
+          color: #005aa0;
+          background: #fff; }
+          .detail .middle .detail_right .inner a:hover {
+            background-color: #cccccc; }
+        .detail .middle .detail_right .inner .curr {
+          background: #02a3f0 !important;
+          color: #fff;
+          border: 1px solid #02a3f0;
+          font-weight: bold;
+          cursor: default; }
+        .detail .middle .detail_right .inner .elli {
+          float: left;
+          padding: 0 10px;
+          border: none;
+          background: none; }
 
 /*phone*/
 .phone {
