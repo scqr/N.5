@@ -29,6 +29,4 @@
     // $('#box .more').click(function () {
     //     $('#box .brands div').css('display', 'block');
     // });
-
-
 })(jQuery);
