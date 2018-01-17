@@ -1,0 +1,25 @@
+{
+  "name": "n.5",
+  "version": "1.0.0",
+  "description": "shop search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scqr/N.5.git"
+  },
+  "author": "coco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scqr/N.5/issues"
+  },
+  "homepage": "https://github.com/scqr/N.5#readme",
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
