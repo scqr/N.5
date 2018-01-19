@@ -391,142 +391,108 @@ $Twelve:12px;
         }
     }
 }
-/*loggin*/
-.loggin{
+/*logup*/
+.logup{
     border: 1px solid #C6E6F3;
-    margin:10px auto 0;
+    margin: 10px auto 0;
     padding: 10px;
     text-align: left;
     width: 958px;
-    overflow:hidden;
-    color:#666;
-    .in{
-        height:453px;
-        width:455px;
-        float:left;
-        margin-top:40px;
-        padding:0 10px;
-        .title{
-            height:43px;
-            width:439px;
-            background-image:url(../img/reg-bg.png);
-            background-repeat:no-repeat;
-            background-position:-162px -153px;
-            margin-bottom:37px;
+    .reg-box{
+        width: 671px;
+        margin-right: auto;
+        margin-left: auto;
+        .single-reg-tit{
+            height: 41px;
+            width: 620px;
+            background-image: url(../img/reg-bg.png);
+            background-repeat: no-repeat;
+            background-position: -162px -69px;
+            margin-bottom: 37px;
+            margin-top: 40px;
+            margin-right: auto;
+            margin-left: auto;
         }
-        .input{
-            height:55px;
-            margin-left:50px;
-            font-size: $Twelve;
-            .name{
-                width:60px;
-                height:25px;
-                line-height: 23px;
-                text-align: right;
-                float:left;
-                span{
-                    display:inline-block;
-                    float:right;
+        .reginputbox {
+            padding-left: 110px;
+            .input {
+                height: 55px;
+                margin-left: 50px;
+                color:#666;
+                font-size: 12px;
+                .width60 {
+                    width: 60px;
+                    height: 25px;
+                    line-height: 23px;
+                    text-align: right;
+                    float: left;
                 }
-                .empty{
-                    width:21px;
-                    height:23px;
+                .fixlogininput {
+                    width: 200px;
+                    padding: 2px;
+                    border: 1px solid #7f9db9;
                 }
-            }
-            .use{
-                width:200px;
-                padding:2px;
-                border:1px solid #7f9db9;
-            }
-            .reg_errmsg{
-                color:#ff0000;
-            }
-            .tip{
-                line-height:25px;
-                font-size: $Twelve;
-                padding-left:65px;
-                position: relative;
-                color:#515151;
-                white-space: normal;
-            }
-            .secret{
-                width:200px;
-                padding:2px;
-                border:1px solid #7f9db9;
-            }
-            a{
-                color:#00B6F2;
-                &:visted{
-                    color:#00B6F2;
-                } 
-                &:link{
-                    color:#00B6F2;
+                .img_right {
+                    margin-left: 3px;
+                    display: none;
                 }
-                &:hover{
-                    color:#ff9900;
-                    text-decoration: underline;
-                }
-            }
-            #login-btn{
-                height:29px;
-                width:190px;
-                float:left;
-                margin-left:132px;
-                display:inline;
-                #login-loading{
-                    visibility: hidden;
+                .tip {
+                    height: 25px;
+                    font-size: 12px;
+                    line-height: 25px;
+                    padding-left: 65px;
+                    position: relative;
+                    color: #515151;
                     white-space: normal;
+                }
+                #verifycode-box {
+                    height: 20px;
+                    float: left;
+                }
+                .testcode {
+                    border: 1px solid #7f9db9;
+                    padding: 2px;
+                    width: 50px;
+                }
+                a{
+                    color: #00B6F2;
+                    &:visited {
+                        color: #0080FF;
+                    }
+                    &:link {
+                        color: #0080FF;
+                    }
+                    &:hover{
+                        color: #FF9900;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            #reg-btn {
+                height: 29px;
+                width: 90px;
+                margin-left: 170px;
+                margin-bottom: 20px;
+                .loadingproc {
+                    visibility: hidden;
                     img{
                         position: relative;
-                        top:3px;
+                        top: 4px;
+                        margin-right: 3px;
                     }
                 }
             }
         }
-    }
-    .ver-line{
-        background-image:url(../img/reg-bg.png);
-        background-repeat:no-repeat;
-        height:403px;
-        width:1px;
-        float:left;
-        background-position:-928px -83px;
-    }
-    .in{
-        .tit{
-            height:43px;
-            width:439px;
-            background-image:url(../img/reg-bg.png);
-            background-repeat:no-repeat;
-            background-position:-163px -197px;
-            margin-left:16px;
-            margin-bottom:37px;
-        }
-        .use{
-            width: 200px;
-            padding: 2px;
-            border: 1px solid #7f9db9;
-        }
-        .img_right{
-            margin-left:3px;
-            vertical-align: top;
-            display:none;
-        }
-        .code {
-            border: 1px solid #7f9db9;
-            padding: 2px;
-            width: 50px;
-        }
-        #reg-btn {
-            height: 29px;
-            width: 90px;
-            margin-left: 170px;
-            margin-bottom: 20px;
-            .reg-loading{
-                visibility:hidden;
-                font-size: $Twelve;
-                display:block;
-            }
+        .single-reg-fbg {
+            height: 3px;
+            width: 671px;
+            background-image: url(../img/reg-bg.png);
+            background-repeat: no-repeat;
+            background-position: -161px -435px;
+            margin-bottom: 40px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 18px;
         }
     }
 }

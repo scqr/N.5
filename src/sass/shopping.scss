@@ -1,0 +1,107 @@
+#cart-wrap{
+    width:950px;
+    margin-right:auto;
+    margin-left:auto;
+    font-size: 12px;
+    .cart-head{
+        height:28px;
+        background-image:url(../img/cart-icon.png);
+        background-repeat:no-repeat;
+        background-position:10px 5px;
+        padding-top:40px;
+        padding-left:610px;
+        .cart-nav{
+            margin:0;
+            float:right;
+            display:block;
+            height:16px;
+            padding:0;
+            width:275px;
+            overflow:hidden;
+            list-style:none;
+            li{
+                line-height:16px;
+                display:block;
+                float:left;
+                margin:0;
+                padding:0 6px;
+                text-decoration: none;
+                border-right:1px solid #ccc;
+                a{
+                    &:visited{
+                        color:#999;
+                        text-decoration: none;
+                    }
+                    &:link{
+                        color:#999;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        color:#333;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .clearfix {
+                height: 1px;
+                clear: both;
+            }
+        }
+    }
+    #cart_err0{
+        display:none;
+        padding:10px;
+        background-color:#FFF8CE;
+        border:1px solid #A0522D;
+        margin-bottom:2px;
+        font-size: 12px;
+    }
+    .cart-date {
+        width: 948px;
+        text-align: center;
+        border: 1px solid #CCCCCC;
+        .cart-tip {
+            background-image: url(../img/cart-tip-bg.png);
+            background-repeat: repeat-x;
+            background-position: top;
+            height: 33px;
+            text-align: center;
+            color: #333333;
+            td{
+                text-align: center;
+            }
+        }
+        .gray-border{
+            td{
+                border-bottom:1px dashed #ccc;
+                a{
+                    &:visited{
+                        color:#003399;
+                        text-decoration: none;
+                    }
+                    &:link{
+                        color:#003399;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        color:#FF9900;
+                        text-align: center;
+                        text-decoration: underline;
+                    }
+                }
+                .antn{
+                    background-color:#fff;
+                    border:1px solid #D3E2FA;
+                }
+                .ctlAnt{
+                    text-align: center;
+                    font-size: 12px;
+                    width:30px;
+                    padding:2px 0;
+                    color:blue;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
