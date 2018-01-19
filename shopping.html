@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="dist/css/shopping.css"/>
+</head>
+<body>
+    <div id="cart-wrap">
+        <div class="cart-head">
+            <ul class="cart-nav">
+                <li>
+                    <a href="javascript:;" target="_blank">收藏夹</a>
+                </li>
+                <li>
+                    <a href="javascript:;" target="_blank">新会员注册</a>
+                    <a href="javascript:;" target="_blank">登录</a>
+                </li>
+                <li>
+                    <a href="javascript:;" target="_blank">我的账户</a>
+                </li>
+                <li>
+                    <a href="javascript:;" title="No5">收藏本站</a>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <div id="cart_err0"></div>
+        <div id="divCartList" class="cart-date">
+            <form name="frmcart" style="margin:0;">
+                <input type="hidden" name="act" value="upd"/>
+                <table id="tbShoppingList" cellspacing="0" border="0" width="948">
+                    <tbody>
+                        <tr class="cart-tip">
+                            <td width="36" height="33">序号</td>
+                            <td width="554" height="33">商品名</td>
+                            <td width="41">规格</td>
+                            <td width="49">一般价</td>
+                            <td width="47">No5价</td>
+                            <td width="29">数量</td>
+                            <td width="59"付款小计></td>
+                            <td width="70">转入收藏夹</td>
+                            <td width="45">删除</td>
+                        </tr>
+                        <tr id="record_6053672" class="gray-border">
+                            <td width="36" height="30">
+                                <input type="hidden" name="productid_1"/>
+                            </td>
+                            <td width="554">
+                                <div align="left">
+                                    <a href="javascript:;" target="_blank">L'Occitane 欧舒丹马鞭草清新沐浴啫喱/沐浴露(26408)</a>
+                                </div>
+                            </td>
+                            <td width="41">250ml</td>
+                            <td width="49">180</td>
+                            <td width="47" id="price_6053672">158</td>
+                            <td width="29">
+                                <input type="text" name="amount_1" value="1" maxlength="3" class="ctlAnt antn" onmouseover="javascript:antOver(this);" onmouseout="javascript:antOut(this);" onblur="javascript:updant(this,6053672);" onkeypress="javascript:if((arguments[0]||window.event).keyCode==13){updant(this,6053672);};"/>
+                                <input type="hidden" value="1"/>
+                                <input type="hidden" value="25010"/>
+                            </td>
+                            <td width="59" id="subtotal_6053672">158</td>
+                            <td width="70">
+                                <a href="javascript:;" id="btnfav1">转入收藏夹</a>
+                            </td>
+                            <td width="45">
+                                <a id="btnDel_6053672" href="javascript:;">删除</a>
+                            </td>
+                        </tr>
+                        <tr id="record_6053671" classm="gray-border">
+                            <td width="36" height="30">
+                                <input type="hidden" name="productid_2">2
+                            </td>
+                            <td width="554">
+                                <div align="left">
+                                    <a href="javascript:;" target="_blank">
+                                        <span class="pstamp">抢购</span>Shiseido 资生堂安热沙防晒露/小金瓶SPF50+ PA++++(03650)
+                                    </a>
+                                </div>
+                            </td>
+                            <td width="41">60ml</td>
+                            <td width="49">300</td>
+                            <td width="47" id="price_6053671">165</td>
+                            <td width="29">
+                                <input type="text" name="amount_2" value="1" maxlength="3" class="ctlAnt antn" onmouseover="javascript:antOver(this);" onmouseout="javascript:antOut(this);" onblur="javascript:updant(this,6053671);" onkeypress="javascript:if((arguments[0]||window.event).keyCode==13){updant(this,6053671);};">
+                                <input type="hidden" value="1">
+                                <input type="hidden" value="21874">
+                            </td>
+                            <td width="59" id="subtotal_6053671">165</td>
+                            <td width="70">
+                                <a href="javascript:addtofav2(21874,$('btnfav2'),-50);" id="btnfav2">转入收藏夹</a>
+                            </td>
+                            <td width="45">
+                                <a id="btnDel_6053671" href="javascript:delpro(21874,10,6053671);">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
