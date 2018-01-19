@@ -6,41 +6,16 @@ $Width:1200px;
 $Twelve:12px;
 
 /*fix*/
-.kfbox{
+#floatButtons {
     position: fixed;
-    width: 58px;
-    bottom: 8px;
-    margin-left: 1195px;
-    z-index: 4;
-    dl{
-        font-size: 12px;
-        color: #444;
-        width: 56px;
-        background: #fff;
-        border: 1px solid #eee;
-        padding: 8px 0;
-        text-align: center;
-        cursor: pointer;
-        height:45px;
-        dt{
-            width: 22px;
-            height: 21px;
-            overflow: hidden;
-            background: url(../img/fix_bg.jpg) no-repeat 0 -24px;
-            margin: 0 auto;
-        }
-        dd{
-            margin-top: 8px;
-        }
-        .kf{
-            dt{
-                width: 22px;
-                height: 24px;
-                overflow: hidden;
-                background: url(../img/fix_bg.jpg) no-repeat 0 0;
-                margin: 0 auto;
-            }
-        }
+    _position: absolute;
+    visibility: hidden;
+    width: 25px;
+    height: 89px;
+    cursor: hand;
+    cursor: pointer;
+    div {
+        margin-bottom: 2px;
     }
 }
 /*top*/
@@ -207,68 +182,6 @@ $Twelve:12px;
                     color:#ff1a3a;
                 }
             }
-            // .code{
-            //     position:absolute;
-            //     top:5px;
-            //     left:504px;
-            //     width:80px;
-            //     height:80px;
-            //     background:url(../img/H_n1.png) no-repeat;
-            // }
-            // ul{
-            //     z-index: 1;
-            //     display:none;
-            //     position:absolute;
-            //     top:5px;
-            //     right:10px;
-            //     width:180px;
-            //     height:167px;
-            //     padding:5px;
-            //     background:$White;
-            //     border:1px solid #999999;
-            //     font-size:$Twelve;
-            //     color:$T_color;
-            //     box-shadow:3px 3px 8px #bfbfbf;
-            //     .pic1{
-            //         border-bottom:1px solid #cccccc;
-            //         position:relative;
-            //         background:url(../img/H_n1.png) no-repeat;
-            //         height:80px;
-            //         padding-bottom:5px;
-            //         strong{
-            //             position:absolute;
-            //             left:90px;
-            //         }
-            //         p{
-            //             position:absolute;
-            //             left:90px;
-            //             .one{
-            //                 position:absolute;
-            //                 top:23px;
-            //                 left:32px;
-            //                 width:25px;
-            //                 height:25px;
-            //                 background:url(../img/H_n3.png) no-repeat left top;
-            //             }
-            //             .two{
-            //                 position:absolute;
-            //                 top:23px;
-            //                 width:25px;
-            //                 height:25px;
-            //                 background:url(../img/H_n3.png) no-repeat left -26px;
-            //            }
-            //         }
-            //     }
-            //     .pic2{
-            //         background:url(../img/H_n2.jpg) no-repeat;
-            //         height:80px;
-            //         padding-top:5px;
-            //         strong{
-            //             position:absolute;
-            //             left:90px;
-            //         }
-            //     }
-            // }
         }
         .right{
             position:absolute;
@@ -1644,6 +1557,88 @@ $Twelve:12px;
                         vertical-align: middle;
                     }
                 }
+                .tips {
+                    height: 52px;
+                    padding: 0 20px;
+                    width: 723px;
+                    padding-top: 6px;
+                    margin-top: 10px;
+                    background: #f8f8f8;
+                    border: 1px solid #e4e4e4;
+                }
+                .group {
+                    width: 723px;
+                    margin-bottom: 15px;
+                    border: 1px solid #e4e4e4;
+                    padding-bottom: 13px;
+                    display: table;
+                    .prodRedTxt {
+                        color: #d11010;
+                    }
+                }
+                .tags {
+                    text-align: right;
+                    color: #acacac;
+                    margin-top: 8px;
+                    padding-right: 20px;
+                }
+                .evazx {
+                    border-bottom: none;
+                    padding-bottom: 0px;
+                    padding-top: 5px;
+                    .question {
+                        color: #2a7dd3;
+                        padding: 0 20px;
+                    }
+                    .xinde {
+                        line-height: 20px;
+                        padding: 9px 20px;
+                        border-bottom: 1px solid #e4e4e4;
+                    }
+                }
+                #btnQue {
+                    background: url(../img/btnGroup.gif) no-repeat 0px -191px;
+                }
+                .prodBtn3 {
+                    border-width: 0px;
+                    width: 75px;
+                    height: 29px;
+                    vertical-align: middle;
+                    cursor: hand;
+                    cursor: pointer;
+                }
+                #quebox {
+                    display: none;
+                    .textdiv {
+                        padding-left: 37px;
+                        width: 700px;
+                        h3 {
+                            font-size: 14px;
+                            color: rgb(0, 0, 0);
+                            padding-top: 10px;
+                            padding-left: 10px;
+                        }
+                        .areatext {
+                            background: #fff;
+                            width: 550px;
+                            height: 50px;
+                            font-size: 12px;
+                            padding: 6px;
+                            border: 1px solid #e4e4e4;
+                        }
+                        #btnSaveQue {
+                            background: url(../img/btnGroup.gif) no-repeat 0px -220px;
+                        }
+                        .prodBtn2 {
+                            border-width: 0px;
+                            width: 100px;
+                            height: 35px;
+                            vertical-align: middle;
+                            cursor: hand;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
             .clear {
                 clear: both;
@@ -1663,7 +1658,6 @@ $Twelve:12px;
         }
     }
 }
-
 /*phone*/
 .phone{
     clear: both;
