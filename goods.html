@@ -15,15 +15,11 @@
 </head>
 <body>
     <!-- fix -->
-    <div id="fs-toolbar1" class="kfbox">
-        <dl class="top" style="visibility: visible;">
-            <dt></dt>
-            <dd>顶部</dd>
-        </dl>
-        <dl class="kf">
-            <dt></dt>
-            <dd>客服</dd>
-        </dl>
+    <div id="floatButtons" style="bottom: 94px; left: 1124.5px; visibility: visible;">
+        <div style="visibility: visible;"><img src="img/top.jpg" width="25" height="89"></div>
+        <div>
+            <img src="img/service.jpg" width="25" height="89">
+        </div>
     </div>
     <!-- top -->
     <div class="top">
@@ -57,17 +53,6 @@
                     <a href="javascript:;">口红</a>
                     <a href="javascript:;">防晒特卖</a>
                 </div>
-                <!-- <div class="code"></div>
-                <ul>
-                    <li class="pic1">
-                        <strong>app下载</strong>
-                        <p>
-                            <a class="one" href="javascript:;"></a>
-                            <a class="two" href="javascript:;"></a>
-                        </p>
-                    </li>
-                    <li class="pic2"><strong>关注微信公众号</strong></li>
-                </ul> -->
             </div>
             <div class="right">
                 购物车<strong>0</strong>件
@@ -1583,14 +1568,57 @@
                         <div class="clrH15"></div>
                     </div>
                     <div id="tab_box_2">
-                        
+                        <div class="goodtabs title_pl">
+                            <span class="more">
+                                <a href="javascript:;" target="_blank">查看更多&gt;&gt;</a>
+                            </span>商品咨询
+                        </div>
+                        <div class="group tips">
+                            <span class="prodRedTxt">温馨提示：</span>商品的包装、产地、批号、日期、库存情况等诸多信息，会因厂家更新商品及销售情况有变更。该回复仅在当时对提问者有效，其他顾客仅供参考。
+                        </div>
+                        <div class="qanda">
+                            <div class="tags">jmd0209 发表于2012-12-20 14:17:09</div>
+                            <div class="evazx">
+                                <p class="question">这款加强型液体洁面皂适合我用么？我是T区较油！</p>
+                                <p class="xinde">客服回复：您好，T区油属于混合型肤质，如果是混合型偏油可以使用这款加强型洁面皂，如果是混合型偏干建议选用温和型洁面皂。感谢您对N°5的支持,祝您购物愉快！</p>
+                            </div>
+                        </div>
+                        <div class="qanda">
+                            <div class="tags">彦妮214 发表于2012-03-19 10:30:04</div>
+                            <div class="evazx">
+                                <p class="question">请问在什么日期前使用</p>
+                                <p class="xinde">客服回复：您好，日期会根据销售及采购情况不断更新，无法为您准确核实，但我们售出的商品都为新鲜商品，如果您比较在意日期，订购时可以给客服留言中说明对日期的要求，我们会尽量按您的要求配送。感谢您对N°5的支持，祝您购物愉快！</p>
+                            </div>
+                        </div>
+                        <div class="topj">
+                            <span class="err"></span>
+                            <button id="btnQue" class="prodBtn3" onclick="javascript:btnClick(this, null, 'prodQuestion');">
+                                <input type="hidden">
+                            </button>
+                        </div>
+                        <div id="quebox">
+                            <form name="frmQue" onsubmit="javascript: return false;">
+                                <input type="hidden" name="act" value="saveProdQue">
+                                <input type="hidden" name="prodId" value="2593">
+                                <div class="textdiv">
+                                    <h3>您的提问：</h3>
+                                    <textarea name="queCnt" class="areatext"></textarea>
+                                    <span class="sub_top80">(4-100个字)</span>
+                                </div>
+                                <div class="textdiv">
+                                    <button id="btnSaveQue" class="prodBtn2" onclick="javascript:saveTxtForm(1, this);">
+                                        <input type="hidden">
+                                    </button>
+                                    <span></span>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="clear"></div>
             </div>
         </div>
-            
-
+    </div>
     <!-- phone -->
     <div class="phone">
         <div class="middle">
