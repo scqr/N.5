@@ -25,6 +25,7 @@ gulp.task("copy-jpg",function () {
     gulp.src("./img/*.jpg").pipe(gulp.dest("./dist/img/"));
     gulp.src("./img/*.png").pipe(gulp.dest("./dist/img/"));
     gulp.src("./img/*.gif").pipe(gulp.dest("./dist/img/"));
+    gulp.src("./img/*.bmp").pipe(gulp.dest("./dist/img/"));
 });
 
 // 监听Html
