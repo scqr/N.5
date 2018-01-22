@@ -1,6 +1,6 @@
 $(function ($) {
     $.noConflict();
-    let 
+    var 
         oAccount = $('.account'),
         oMe      = $('.top ul'),
         oInput   = $('.search-frame input'),
@@ -14,14 +14,14 @@ $(function ($) {
         oListDt = $('#list dt'),
         oListPanel   = $('#list .panel');
 
-        let iTimer = null;
+        var iTimer = null;
 
         //我的账户
         oAccount.on('mouseenter', function () {
             clearTimeout(iTimer);
             oAccount.css('backgroundColor','#ffffff');
             oAccount.css('borderColor', '#dcdcdc');
-            let iIndex = oAccount.index($(this));
+            var iIndex = oAccount.index($(this));
             oMe.css('display', 'none').eq(iIndex).css('display', 'block');
         });
         oAccount.on('mouseleave', function () {
@@ -56,7 +56,7 @@ $(function ($) {
         }, function () {
             oNo.css('display', 'none');
         });
-        // let sInput = oInput.value;
+        // var sInput = oInput.value;
         // oNo.on('click', function () {
         //     sInput = '';
         // });
@@ -91,7 +91,7 @@ $(function ($) {
         //纵向选项卡
         oChooseDl.on('mouseenter', function () {
             clearTimeout(iTimer);
-            let iIndex = oChooseDl.index($(this));
+            var iIndex = oChooseDl.index($(this));
             oListDt.css('background', '#f8f8f8').eq(iIndex).css('background', '#ffffff');
             oListPanel.css('display', 'none').eq(iIndex).css('display', 'block');
         });
@@ -104,7 +104,7 @@ $(function ($) {
         oListPanel.hover(function () {
             clearTimeout(iTimer);
         }, function () {
-            let iIndex = oChooseDl.index($(this));
+            var iIndex = oChooseDl.index($(this));
             oListDt.eq(iIndex).css('background', '#ffffff');
         });
     });

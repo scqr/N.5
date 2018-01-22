@@ -54,17 +54,17 @@
     Carousel.prototype = {
         constructor: Carousel,
         createBtnList: function () {
-            // let oCarouselBtn = $('<div>').addClass('carousel-btn').appendTo(this.el);
+            // var oCarouselBtn = $('<div>').addClass('carousel-btn').appendTo(this.el);
             // for(var i = 0; i < this.imgs.length; i++) {
             //     var oA = $('<a>').appendTo(oCarouselBtn);
             //     if(i === 0) {
             //         oA.addClass('active');
             //     }
             // }
-            let oCarouselBtn = $('#btn');
+            var oCarouselBtn = $('#btn');
             this.btns =  oCarouselBtn.children();
 
-            let oThat = this;
+            var oThat = this;
             this.btns.bind('mouseenter', function () {
                 oThat.index = $(this).index();
                 

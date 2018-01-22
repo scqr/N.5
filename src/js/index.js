@@ -1,6 +1,6 @@
 $(function ($) {
     $.noConflict();
-    let 
+    var 
         oAccount = $('.account'),
         oMe      = $('.top ul'),
         oInput   = $('.search-frame input'),
@@ -14,14 +14,14 @@ $(function ($) {
         oListDt = $('#list dt'),
         oListPanel   = $('#list .panel');
 
-        let iTimer = null;
+        var iTimer = null;
 
         //我的账户
         oAccount.on('mouseenter', function () {
             clearTimeout(iTimer);
             oAccount.css('backgroundColor','#ffffff');
             oAccount.css('borderColor', '#dcdcdc');
-            let iIndex = oAccount.index($(this));
+            var iIndex = oAccount.index($(this));
             oMe.css('display', 'none').eq(iIndex).css('display', 'block');
         });
         oAccount.on('mouseleave', function () {
@@ -56,7 +56,7 @@ $(function ($) {
         }, function () {
             oNo.css('display', 'none');
         });
-        // let sInput = oInput.value;
+        // var sInput = oInput.value;
         // oNo.on('click', function () {
         //     sInput = '';
         // });
@@ -94,7 +94,7 @@ $(function ($) {
         //纵向选项卡
         oChooseDl.on('mouseenter', function () {
             clearTimeout(iTimer);
-            let iIndex = oChooseDl.index($(this));
+            var iIndex = oChooseDl.index($(this));
             oListDt.css('background', '#f8f8f8').eq(iIndex).css('background', '#ffffff');
             oListPanel.css('display', 'none').eq(iIndex).css('display', 'block');
         });
@@ -107,15 +107,15 @@ $(function ($) {
         oListPanel.hover(function () {
             clearTimeout(iTimer);
         }, function () {
-            let iIndex = oChooseDl.index($(this));
+            var iIndex = oChooseDl.index($(this));
             oListDt.eq(iIndex).css('background', '#ffffff');
         });
 
         //倒计时
-        let intDiff = parseInt(86400); //倒计时总秒数量
+        var intDiff = parseInt(86400); //倒计时总秒数量
         function timer(intDiff) {
             setInterval(function () {
-            let 
+            var 
                 hour = 0,
                 minute = 0,
                 second = 0; //时间默认值
@@ -139,14 +139,14 @@ $(function ($) {
 
         //横向选项卡
         $('#uls li').hover(function () {
-            let iIndex = $(this).index();
+            var iIndex = $(this).index();
             $('#uls li').removeClass('hover').eq(iIndex).addClass('hover');
             $('.act').css('display', 'none').eq(iIndex).css('display', 'block');
         });
 
         //手风琴
         // $('.move .toplist').bind('mouseenter', function () {
-        //     let iIndex = $('.move').index();
+        //     var iIndex = $('.move').index();
         //     $('.move').removeClass('m').eq(iIndex).addClass('m');
         // });
 
