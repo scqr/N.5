@@ -1,8 +1,9 @@
-var gulp = require('gulp');
-// var uglifyJs = require('gulp-uglify');
-var connect  = require('gulp-connect');
-var rubySass = require('gulp-ruby-sass');
-var concat = require('gulp-concat');
+const gulp = require('gulp');
+// const uglifyJs = require('gulp-uglify');
+const connect  = require('gulp-connect');
+const rubySass = require('gulp-ruby-sass');
+const concat = require('gulp-concat');
+const minify = require("gulp-babel-minify");
 
 // 编译Sass
 gulp.task('sass', function () {
@@ -20,6 +21,16 @@ gulp.task('sass', function () {
 //         .pipe(gulp.dest('./dist/js/'));
 // });
 
+gulp.task("minify", () =>{
+    gulp.src("./src/js/*.js")
+        .pipe(minify({
+        mangle: {
+            keepClassName: true
+        }
+    }))
+  .pipe(gulp.dest("./dist/js/"));
+});
+
 //把img文件夹下所有的jpg文件复制到发布目录下
 gulp.task("copy-jpg",function () {
     gulp.src("./img/*.jpg").pipe(gulp.dest("./dist/img/"));
@@ -29,12 +40,12 @@ gulp.task("copy-jpg",function () {
 });
 
 // 监听Html
-gulp.task('html', ['sass', 'copy-jpg'], function () {
+gulp.task('html', ['sass', 'copy-jpg', 'minify'], function () {
     return gulp.src('./*.html').pipe(connect.reload());
 });
 
 // 监听
-gulp.task('default', ['sass', 'copy-jpg'], function () {
+gulp.task('default', ['sass', 'copy-jpg', 'minify'], function () {
     // 开启服务器
     connect.server({
         port: 9001,
@@ -42,5 +53,5 @@ gulp.task('default', ['sass', 'copy-jpg'], function () {
     });
     gulp.watch('./img/*.jpg', ['html']);
     gulp.watch('./src/sass/*.scss', ['html']);
-    // gulp.watch('./src/js/*.js', ['html']);
+    gulp.watch('./src/js/*.js', ['html']);
 });
