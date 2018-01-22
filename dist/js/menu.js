@@ -1,0 +1,1 @@
+(function(a){function b(){a('#MENU ul').hide(),a('#MENU .B').show(),a('#MENU h3').click(function(){var b=a(this).next();return b.is('ul')&&b.is(':visible')?!1:b.is('ul')&&!b.is(':visible')?(a('#MENU ul:visible').slideUp('normal'),b.slideDown('normal'),!1):void 0})}a.noConflict();a(document).ready(function(){b()})})(jQuery);
