@@ -7,7 +7,8 @@
     <title>注册</title>
     <link rel="stylesheet" href="dist/css/sign_up.css"/>
     <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
-    <script src="dist/js/sign_in.js"></script>
+    <script src="dist/js/login.js"></script>
+    <script src="dist/js/common.js"></script>
     <link rel="icon" href="img/icon.gif" type="image/gif"/>
 </head>
 <body>
@@ -832,20 +833,20 @@
                     <div class="input">
                         <div class="width60">用 户 名：</div>
                         <input type="text" name="txtRegUserName" id="txtRegUserName" maxlength="30" class="fixlogininput" value="">
-                        <img src="img/right.png" class="img_right">
-                        <div class="tip"></div>
+                        <img src="img/right.png" class="img_right" id="yes_user">
+                        <div class="tip" id="tip_user"></div>
                     </div>
                     <div class="input">
                         <div class="width60">输入密码：</div>
                         <input type="password" name="txtRegPassword" id="txtRegPassword" maxlength="16" class="fixlogininput">
-                        <img src="img/right.png" class="img_right">
-                        <div class="tip"></div>
+                        <img src="img/right.png" class="img_right" id="yes_pass">
+                        <div class="tip" id="tip_pass"></div>
                     </div>
                     <div class="input">
                         <div class="width60">重复密码：</div>
                         <input type="password" name="txtRePassword" id="txtRePassword" maxlength="16" class="fixlogininput">
-                        <img src="img/right.png" class="img_right">
-                        <div class="tip"></div>
+                        <img src="img/right.png" class="img_right" id="yes_reset">
+                        <div class="tip" id="tip_reset"></div>
                     </div>
                     <div class="input">
                         <div class="width60">电子邮件：</div>
