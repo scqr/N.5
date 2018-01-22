@@ -415,6 +415,15 @@ $Twelve:12px;
         }
         .reginputbox {
             padding-left: 110px;
+            .tip {
+                height: 25px;
+                font-size: 12px;
+                line-height: 25px;
+                padding-left: 65px;
+                position: relative;
+                color: #515151;
+                white-space: normal;
+            }
             .input {
                 height: 55px;
                 margin-left: 50px;
@@ -432,18 +441,21 @@ $Twelve:12px;
                     padding: 2px;
                     border: 1px solid #7f9db9;
                 }
+                .input_focus{
+                    border:1px solid #00008B;
+                    background-color:#EAF5FF;
+                }
+                .input_failure{
+                    border:1px solid maroon;
+                    background-color:#FFFDDF;
+                    color:#8B0000;
+                }
+                .reg_errmsg {
+                    color: #ff0000;
+                }
                 .img_right {
                     margin-left: 3px;
                     display: none;
-                }
-                .tip {
-                    height: 25px;
-                    font-size: 12px;
-                    line-height: 25px;
-                    padding-left: 65px;
-                    position: relative;
-                    color: #515151;
-                    white-space: normal;
                 }
                 #verifycode-box {
                     height: 20px;
@@ -466,6 +478,9 @@ $Twelve:12px;
                         color: #FF9900;
                         text-decoration: underline;
                     }
+                }
+                img{
+                    vertical-align: top;
                 }
             }
             #reg-btn {
