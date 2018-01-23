@@ -61,4 +61,58 @@ $(function ($) {
             return true;
         }
     });
+    //验证邮箱
+    $('#txtEmail').focus(() => {
+        $('#yes_email').addClass('img_right');
+        $('#txtEmail').addClass('input_focus'); 
+        $('#tip_email').text("格式例如：770107@qq.com; 770107@qq.com.cn").removeClass('reg_errmsg');
+    }).blur(() => {
+        var reg5 = /[^\x00-\xff]/g;
+        var reg6 = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        if($('#txtEmail').val().length == 0) {
+            $('#txtEmail').removeClass('input_focus').addClass('input_failure');
+            $('#tip_email').text("请输入您的邮箱地址！").addClass('reg_errmsg');
+        } else if(reg6.test($('#txtEmail').val())) {
+            $('#yes_email').removeClass('img_right');
+            $('#tip_email').text("");
+        } else {
+            $('#yes_email').addClass('img_right');
+            $('#txtEmail').removeClass('input_focus').addClass('input_failure');
+            $('#tip_email').text("邮箱地址格式不正确，请重新输入！").addClass('reg_errmsg');
+        }
+    });
+    //验证码
+    var oVerifyCode = $('#verify-code');
+    oVerifyCode.text(createVerifyCode());
+    oVerifyCode.on('click', () => {
+        oVerifyCode.text(createVerifyCode());
+    });
+    function createVerifyCode() {   // 生成随机字符串
+        var sSeeds = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        var sVerify = '';
+        for(var i = 0; i < 4; i++) {
+            var iIndex = Math.floor(Math.random() * sSeeds.length);
+            sVerify += sSeeds[iIndex];
+        }
+        return sVerify;
+    }
+    var content = oVerifyCode.text();
+    $('#txtVerifyCode').focus(() => {
+        $('#yes_verfycode').addClass('img_right');
+        $('#txtVerifyCode').addClass('input_focus'); 
+        $('#txtVerifyCodeChkMsg').text("看不清验证码时，可以点击验证码重换一张！").removeClass('reg_errmsg');
+    }).blur(() => {
+        if($('#txtVerifyCode').val() == 0) {
+            $('#yes_verfycode').addClass('img_right');
+            $('#txtVerifyCode').removeClass('input_focus').addClass('input_failure');
+            $('#txtVerifyCodeChkMsg').text("请输入验证码！").addClass('reg_errmsg');
+        } else if($('#txtVerifyCode').val() == content) {
+            $('#yes_verfycode').removeClass('img_right');
+            $('#txtVerifyCodeChkMsg').text("");
+        } else {
+            $('#yes_verfycode').addClass('img_right');
+            $('#txtVerifyCode').removeClass('input_focus').addClass('input_failure');
+            $('#txtVerifyCodeChkMsg').text("验证码不正确，请重新输入！").addClass('reg_errmsg');
+        }
+    });
 });
