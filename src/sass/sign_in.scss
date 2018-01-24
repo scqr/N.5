@@ -5,6 +5,79 @@ $White:#ffffff;
 $Width:1200px;
 $Twelve:12px;
 
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+/*shadow*/
+#shadow{
+    display:none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    left: 0;
+    top: 0;
+    z-index: 1;
+    #proto-layer {
+        position: fixed;
+        width: 900px;
+        height: 525px;
+        border: 1px solid #999;
+        box-shadow: 5px 5px 1px #b8b8b8;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        margin-left: -450px;
+        margin-top: -250px;
+        z-index: 999;
+        .iframe{
+            font-size: $Twelve;
+            text-align: left;
+            overflow:auto;
+            width: 890px;
+            height: 405px;
+            margin-left: 2px;
+            border: none;
+            padding:0;
+            margin:10px;
+            h4{
+                margin: 5px 0px 5px 0px;
+            }
+        }
+        div {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .title {
+            background-color: #f5f5f5;
+            border-bottom: 2px solid #eee;
+            font-weight: bold;
+            #close-proto-btn {
+                position: absolute;
+                right: 0px;
+                padding: 5px;
+                top: 0px;
+                color:#666;
+                &:hover{
+                    background-color: #ccc;
+                }
+            }
+        }
+        button {
+            width: 300px;
+            background-color: #e4393c;
+            color: #fff;
+            padding: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}
 /*top*/
 .top{
     overflow:hidden;
@@ -414,6 +487,26 @@ $Twelve:12px;
             background-position:-162px -153px;
             margin-bottom:37px;
         }
+        .tip{
+            line-height:25px;
+            height:25px;
+            font-size: $Twelve;
+            padding-left:65px;
+            position: relative;
+            color:#515151;
+            white-space: normal;
+        }
+        #code{
+            display: inline-block;
+            width: 65px;
+            height: 20px;
+            vertical-align: bottom;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px;
+            font-size: 22px;
+            cursor: pointer;
+        }
         .input{
             height:55px;
             margin-left:50px;
@@ -441,13 +534,14 @@ $Twelve:12px;
             .reg_errmsg{
                 color:#ff0000;
             }
-            .tip{
-                line-height:25px;
-                font-size: $Twelve;
-                padding-left:65px;
-                position: relative;
-                color:#515151;
-                white-space: normal;
+            .input_focus{
+                border:1px solid #00008B;
+                background-color:#EAF5FF;
+            }
+            .input_failure{
+                border:1px solid maroon;
+                background-color:#FFFDDF;
+                color:#8B0000;
             }
             .secret{
                 width:200px;
@@ -510,12 +604,23 @@ $Twelve:12px;
         .img_right{
             margin-left:3px;
             vertical-align: top;
-            display:none;
+            display: none;
         }
         .code {
             border: 1px solid #7f9db9;
             padding: 2px;
             width: 50px;
+        }
+        #verify-code{
+            display: inline-block;
+            width: 65px;
+            height: 20px;
+            vertical-align: bottom;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px;
+            font-size: 22px;
+            cursor: pointer;
         }
         #reg-btn {
             height: 29px;
