@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/shopping.css"/>
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+    <script src="js/shopping.js"></script>
+    <link rel="icon" href="img/icon.gif" type="image/gif"/>
+</head>
+<body>
+    <div id="antupdtip">
+        操作成功！<br>应付商品金额为：<span id="tipCartMoney"></span>元<br>
+        <a href="javascript:;" />[关闭]</a>
+    </div>
+    <div id="cart_wait" class="cart_wait">正在载入...</div>
+    <div id="antpmt" class="antpmt">输入新的数量值后，按回车键或单击文本框以外的区域即可完成修改数量的操作。</div>
+    <div id="pro_tip" onmouseover="javascript:;" onmouseout="javascript:;"></div>
+    <div id="cart_tip"></div>
+    <div id="cartShadow"></div>
+    <div id="cartShadow2" style="left: 426px; top: 376px;"></div>
+    <div id="cartSuc" style="left: 418px; top: 368px;">
+        <div class="title">提示
+            <a href="javascript:;" onclick="javascript:;">×</a>
+        </div>
+        <div class="content">
+            <span id="sucMsg">商品已成功加入购物车！</span><br>
+            <a href="javascript:;" onclick="javascript:;">查看购物车</a>
+        </div>
+        <div id="sucCD"></div>
+    </div>
+    <div id="cart-wrap">
+        <div class="cart-head">
+            <ul class="cart-nav">
+                <li>
+                    <a href="javascript:;" target="_blank">收藏夹</a>
+                </li>
+                <li>
+                    <a href="javascript:;" target="_blank">新会员注册</a>
+                    <a href="javascript:;" target="_blank">登录</a>
+                </li>
+                <li>
+                    <a href="javascript:;" target="_blank">我的账户</a>
+                </li>
+                <li>
+                    <a href="javascript:;" title="No5">收藏本站</a>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <div id="cart_err0"></div>
+        <div id="divCartList" class="cart-date">
+            <form name="frmcart" style="margin:0;">
+                <input type="hidden" name="act" value="upd"/>
+                <table id="tbShoppingList" cellspacing="0" border="0" width="948">
+                    <tbody>
+                        <tr class="cart-tip">
+                            <td width="36" height="33">序号</td>
+                            <td width="554" height="33">商品名</td>
+                            <td width="41">规格</td>
+                            <td width="49">一般价</td>
+                            <td width="47">No5价</td>
+                            <td width="29">数量</td>
+                            <td width="59">付款小计</td>
+                            <td width="70">转入收藏夹</td>
+                            <td width="45">删除</td>
+                        </tr>
+                        <tr id="record_6053672" class="gray-border">
+                            <td width="36" height="30">
+                                <input type="hidden" name="productid_1"/>1
+                            </td>
+                            <td width="554">
+                                <div align="left">
+                                    <a href="javascript:;" target="_blank">L'Occitane 欧舒丹马鞭草清新沐浴啫喱/沐浴露(26408)</a>
+                                </div>
+                            </td>
+                            <td width="41">250ml</td>
+                            <td width="49">180</td>
+                            <td width="47" id="price_6053672">158</td>
+                            <td width="29">
+                                <input type="text" name="amount_1" value="1" maxlength="3" class="ctlAnt antn"/>
+                                <input type="hidden" value="1"/>
+                                <input type="hidden" value="25010"/>
+                            </td>
+                            <td width="59" id="subtotal_6053672">158</td>
+                            <td width="70">
+                                <a href="javascript:;" id="btnfav1">转入收藏夹</a>
+                            </td>
+                            <td width="45">
+                                <a id="btnDel_6053672" href="javascript:;">删除</a>
+                            </td>
+                        </tr>
+                        <tr id="record_6053671" class="gray-border">
+                            <td width="36" height="30">
+                                <input type="hidden" name="productid_2">2
+                            </td>
+                            <td width="554">
+                                <div align="left">
+                                    <a href="javascript:;" target="_blank">
+                                        <span class="pstamp">抢购</span>Shiseido 资生堂安热沙防晒露/小金瓶SPF50+ PA++++(03650)
+                                    </a>
+                                </div>
+                            </td>
+                            <td width="41">60ml</td>
+                            <td width="49">300</td>
+                            <td width="47" id="price_6053671">165</td>
+                            <td width="29">
+                                <input type="text" name="amount_2" value="1" maxlength="3" class="ctlAnt antn" />
+                                <input type="hidden" value="1">
+                                <input type="hidden" value="21874">
+                            </td>
+                            <td width="59" id="subtotal_6053671">165</td>
+                            <td width="70">
+                                <a href="javascript:addtofav2(21874,$('btnfav2'),-50);" id="btnfav2">转入收藏夹</a>
+                            </td>
+                            <td width="45">
+                                <a id="btnDel_6053671" href="javascript:delpro(21874,10,6053671);">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div id="divM" class="amount" style="display:none">商品总金额：
+                <span id="numPM" class="font-red">￥806</span>元
+                <span id="spanCouponText" style="display:none;">－商品兑换券：
+                    <span id="numVM" class="font-red">￥0</span>元
+                </span>
+                <span id="spanZJText" style="display:none;">－直减金额：
+                    <span id="numZJ" class="font-red">￥0</span>元
+                </span>
+            </div>
+            <div class="amount">
+                <strong>应付商品金额：
+                    <span id="numPM2" class="font-red">￥806</span>元
+                </strong>
+            </div>
+            <div class="amount"></div>
+            <div id="cartErr"></div>
+        </div>
+        <div class="cart-area">
+            <div class="cart-btn-dle">
+                输入兑换券帐号：<input type="text" name="dhqAccount" id="dhqAccount" maxlength="20" />
+                <div id="divExchange"></div>
+                <input id="btnExchange" type="button" value="兑换商品" />
+            </div>
+            <div style="float:left;position:relative;top:5px;">
+                <a href="javascript:;" />
+                    <img src="img/icon-dle.png" border="0" style="margin-right:5px">
+                    <span>清空购物车</span>
+                </a>
+            </div>
+            <div class="cart-btn">
+                <a href="javascript:;" />
+                    <img src="img/btn-go-on.png" border="0">
+                </a>
+            </div>
+            <div class="cart-btn">
+                <a href="javascript:;">
+                    <img src="img/btn-go-sett.png" border="0">
+                </a>
+            </div>
+        </div>
+        <div id="thpList" class="special-area" style="display:block;">
+            <div class="single-area-wrap">
+                <div class="single-area">
+                    <div class="single-area-title">迷你装香水特惠区</div>
+                    <form name="form_1" action="checkout_addtocart.asp" method="post">
+                        <input type="hidden" name="productid" value="0">
+                        <ul class="special-list">
+                            <li>
+                                <input type="radio" name="proid" value="30850">
+                                <a href="javascript:;" target="_blank">范思哲黄水晶女士香水5ml <span class="font-orange">38</span></a>
+                            </li>
+                            <li>
+                                <input type="radio" name="proid" value="30851">
+                                <a href="javascript:;" target="_blank">博柏利(巴宝莉)London伦敦男士香水4.5ml <span class="font-orange">35</span></a>
+                            </li>
+                            <div class="btn-sp-add"> 
+                                <a href="javascript:;">
+                                    <img id="thpbtn_1" src="img/btn-sp-add.png" border="0">
+                                </a>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+                <div class="single-area">
+                    <div class="single-area-title">迷你装护肤品特惠区</div>
+                    <form name="form_2" action="checkout_addtocart.asp" method="post">
+                        <input type="hidden" name="productid" value="0">
+                        <ul class="special-list">
+                            <li>
+                                <input type="radio" name="proid" value="29714">
+                                <a href="javascript:;" target="_blank">雅诗兰黛即时修护眼部密集精华露(小棕瓶即时特润眼霜) 4ml <span class="font-orange">35</span></a>
+                            </li>
+                            <li>
+                                <input type="radio" name="proid" value="30112">
+                                <a href="javascript:;" target="_blank">安娜苏毛孔细致精华露(10468)无外盒!15ml <span class="font-orange">50</span></a>
+                            </li>
+                            <div class="btn-sp-add"> 
+                                <a href="javascript:;">
+                                    <img id="thpbtn_2" src="img/btn-sp-add.png" border="0">
+                                </a>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+                <div class="single-area">
+                    <div class="single-area-title">彩妆特惠区</div>
+                    <form name="form_4" action="checkout_addtocart.asp" method="post">
+                        <input type="hidden" name="productid" value="0">
+                        <ul class="special-list">
+                            <li>
+                                <input type="radio" name="proid" value="19868">
+                                <a href="javascript:;" target="_blank">碧欧泉修颜平肤隔离霜(紫色CC霜) 5ml <span class="font-orange">25</span></a>
+                            </li>
+                            <li>
+                                <input type="radio" name="proid" value="30700">
+                                <a href="javascript:;" target="_blank">安娜苏魔幻媚惑眼影900# 浅青绿色(替换装,无外盒!)2.5g <span class="font-orange">20</span></a>
+                            </li>
+                            <div class="btn-sp-add"> 
+                                <a href="javascript:;">
+                                    <img id="thpbtn_4" src="img/btn-sp-add.png" border="0">
+                                </a>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <div class="single-area-wrap">
+                <div class="single-area">
+                    <div class="single-area-title">15元特惠区</div>
+                    <form name="form_5" action="checkout_addtocart.asp" method="post">
+                        <input type="hidden" name="productid" value="0">
+                        <ul class="special-list">
+                            <li>
+                                <input type="radio" name="proid" value="30910">
+                                <a href="javascript:;" target="_blank">Netharria妮塔莉雅 卸妆湿巾(40015) <span class="font-orange">15</span></a>
+                            </li>
+                            <div class="btn-sp-add"> 
+                                <a href="javascript:;">
+                                    <img id="thpbtn_5" src="img/btn-sp-add.png" border="0">
+                                </a>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+                <div class="single-area">
+                    <div class="single-area-title">面膜特惠区</div>
+                    <form name="form_6" action="checkout_addtocart.asp" method="post">
+                        <input type="hidden" name="productid" value="0">
+                        <ul class="special-list">
+                            <li>
+                                <input type="radio" name="proid" value="16666">
+                                <a href="javascript:;" target="_blank">玛姬儿独立包装纸膜10枚/组 <span class="font-orange">4</span></a>
+                            </li>
+                            <li>
+                                <input type="radio" name="proid" value="33404">
+                                <a href="javascript:;" target="_blank">I.myss爱蜜诗 胶原蛋白面膜 单片 <span class="font-orange">6</span></a>
+                            </li>
+                            <li>
+                                <input type="radio" name="proid" value="34028">
+                                <a href="javascript:;" target="_blank">Laneige 兰芝夜间修护睡眠面膜/免洗面膜小样 15ml <span class="font-orange">18</span></a>
+                            </li>
+                            <div class="btn-sp-add"> 
+                                <a href="javascript:;">
+                                    <img id="thpbtn_6" src="img/btn-sp-add.png" border="0">
+                                </a>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+                <div class="single-area">
+                    <div class="single-area-title">促销特惠区</div>
+                    <form name="form_172" action="checkout_addtocart.asp" method="post">
+                        <input type="hidden" name="productid" value="0">
+                        <ul class="special-list">
+                            <li>
+                                <input type="radio" name="proid" value="31705">
+                                <a href="javascript:;" target="_blank">SpongeBob海绵宝宝 婴儿棉柔手口湿巾七彩装 8片*7包 <span class="font-orange">10</span></a>
+                            </li>
+                            <div class="btn-sp-add"> 
+                                <a href="javascript:;">
+                                    <img id="thpbtn_172" src="img/btn-sp-add.png" border="0">
+                                </a>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>
