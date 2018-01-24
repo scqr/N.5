@@ -152,7 +152,7 @@ $(function ($) {
     $('#frmUserRegister').submit(() => {
         $.ajax({
             url:"php/usercheck.php",
-            method:"post",
+            type:"post",
             data:{
                 "username":$("#txtRegUserName").val(),
                 "userpass":$('#txtRegPassword').val()
