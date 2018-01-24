@@ -39,13 +39,23 @@ gulp.task("copy-jpg",function () {
     gulp.src("./img/*.bmp").pipe(gulp.dest("./dist/img/"));
 });
 
-// 监听Html
-gulp.task('html', ['sass', 'copy-jpg', 'minify'], function () {
+//监听php文件
+gulp.task("copy-php",function () {
+    gulp.src("./php/*.php").pipe(gulp.dest("./dist/php/"));
+});
+
+//监听html文件
+gulp.task("copy-html",function () {
+    gulp.src("./*.html").pipe(gulp.dest("./dist/"));
+});
+
+// 自动刷新Html
+gulp.task('html', ['sass', 'copy-jpg', 'minify', 'copy-php', 'copy-html'], function () {
     return gulp.src('./*.html').pipe(connect.reload());
 });
 
 // 监听
-gulp.task('default', ['sass', 'copy-jpg', 'minify'], function () {
+gulp.task('default', ['sass', 'copy-jpg', 'minify', 'copy-php', 'copy-html'], function () {
     // 开启服务器
     connect.server({
         port: 9001,
@@ -54,4 +64,5 @@ gulp.task('default', ['sass', 'copy-jpg', 'minify'], function () {
     gulp.watch('./img/*.jpg', ['html']);
     gulp.watch('./src/sass/*.scss', ['html']);
     gulp.watch('./src/js/*.js', ['html']);
+    gulp.watch('./php/*.php', ['html']);
 });
