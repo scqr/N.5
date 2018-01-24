@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册</title>
-    <link rel="stylesheet" href="dist/css/sign_up.css"/>
+    <link rel="stylesheet" href="css/sign_up.css"/>
     <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
-    <script src="dist/js/login.js"></script>
-    <script src="dist/js/common.js"></script>
+    <script src="js/login.js"></script>
+    <!-- <script src="../src/js/login.js"></script> -->
+    <script src="js/common.js"></script>
     <link rel="icon" href="img/icon.gif" type="image/gif"/>
 </head>
 <body>
@@ -96,14 +97,14 @@
                 本协议的生效、履行、解释及争议的解决均适用中华人民共和国法律，如发生争议应提交北京仲裁委员会裁决，仲裁裁决是终局的。本协议因与中华人民共和国现行法律相抵触而导致部分无效，不影响其他部分的效力。
             </div>
             <div class="btn-box">
-                <button type="button" id="proto-btn">同意并继续</button>
+                <button type="button" id="proto-btn" onclick="javascript:document.getElementById('shadow').style.display='none';">同意并继续</button>
             </div>
         </div>
     </div>
     <!-- top -->
     <div class="top">
         <div class="middle">
-            <p>上午好，欢迎光临No5时尚广场。<a href="javascript:;">[登录]</a><a href="javascript:;">[注册]</a></p>
+            <p>上午好，欢迎光临No5时尚广场。<a href="sign_in.html" target="_blank">[登录]</a><a href="sign_up.html" target="_blank">[注册]</a></p>
             <div class="left"><a class="account" href="javascript:;">我的账户</a><b></b><span></span><a href="javascript:;">收藏本站</a><span></span><a href="javascript:;">帮助中心</a><i><p></p>010-51666655</i></div>
         </div>
         <ul>
@@ -147,9 +148,9 @@
         <div class="middle" id="mid">
             <p>全部商品分类</p>
             <ul>
-                <li class="BLUE"><a href="javascript:;" class="blue">首页</a></li>
+                <li class="BLUE"><a href="index.html" class="blue">首页</a></li>
                 <li><a href="javascript:;" class="blue">超值小样</a></li>
-                <li><a href="javascript:;" class="blue">明星推荐</a></li>
+                <li><a href="starRecommend.html" class="blue">明星推荐</a></li>
                 <li><a href="javascript:;" class="blue">最新活动</a></li>
                 <li><a href="javascript:;" class="blue">新品上架</a></li>
                 <li><a href="javascript:;" class="red">本周特价</a></li>
@@ -914,19 +915,19 @@
             <form name="frmVar">
                 <input type="hidden" name="para" value="">
             </form>
-            <form name="frmUserRegister" id="frmUserRegister" action="checkout_register.asp" method="post" autocomplete="off">
+            <form name="frmUserRegister" id="frmUserRegister" action="php/register.php" method="post" autocomplete="off">
                 <input type="hidden" name="submitsource" value="/customer/userregister.asp">
                 <input type="hidden" name="returnurl" value="">
                 <div class="reginputbox">
                     <div class="input">
                         <div class="width60">用 户 名：</div>
-                        <input type="text" name="txtRegUserName" id="txtRegUserName" maxlength="30" class="fixlogininput" value="">
+                        <input type="text" id="txtRegUserName" maxlength="30" name="username" class="fixlogininput" value="">
                         <img src="img/right.png" class="img_right" id="yes_user">
                         <div class="tip" id="tip_user"></div>
                     </div>
                     <div class="input">
                         <div class="width60">输入密码：</div>
-                        <input type="password" name="txtRegPassword" id="txtRegPassword" maxlength="16" class="fixlogininput">
+                        <input type="password" id="txtRegPassword" name="userpass" maxlength="16" class="fixlogininput">
                         <img src="img/right.png" class="img_right" id="yes_pass">
                         <div class="tip" id="tip_pass"></div>
                     </div>
@@ -953,14 +954,14 @@
                     </div>
                     <div class="input">
                         <div class="width60"></div>
-                        <input style="vertical-align: middle;" type="checkbox" id="reg-proto" checked="checked">我已阅读并同意<a href="javascript:void(0);" id="elem-proto">《NO5用户注册协议》</a>
+                        <input style="vertical-align: middle;" type="checkbox" id="reg-proto" checked="checked">我已阅读并同意<a href="javascript:;" id="elem-proto">《NO5用户注册协议》</a>
                         <div id="err-proto" class="tip"></div>
                     </div>
                     <div id="reg-btn">
                         <input type="image" id="btnUserRegSubmit" src="img/btn-reg.png">
                         <span class="loadingproc"><img src="img/login-loader.gif">正在注册...</span>
                     </div>
-                    <div class="input">如果您已经是No5时尚广场的会员，请点击<a href="login.html?returnurl=">[登录]</a></div>
+                    <div class="input">如果您已经是No5时尚广场的会员，请点击<a href="sign_in.html" target="_blank">[登录]</a></div>
                 </div>
             </form>
             <div class="single-reg-fbg"></div>
