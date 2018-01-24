@@ -21,8 +21,8 @@
     //三、响应
     if($rows == 0){
         // echo "0";
-        header("Location:../index.html");
     }else{
         echo "1";
+        header("Location:../index.html");
     }
 ?>
