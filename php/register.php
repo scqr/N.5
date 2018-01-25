@@ -18,7 +18,8 @@
     if($rows == 0) {
         //3.2把该用户名插入数据库中
         //4、执行SQL（struct query language）语句
-        $sqlStr = "instert into vip values('".$username."', '".$userpass."')";
+        $sqlStr = "insert into vip values('".$username."', '".$userpass."')";
+        //echo $sqlStr;
         mysql_query($sqlStr, $conn);
         //5、关闭数据库
         mysql_close($conn);
