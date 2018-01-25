@@ -83,4 +83,11 @@ $(function ($) {
             oNone.css('display', 'none');
         }, 50);
     });
+
+    //菜单栏
+    $('#left-catnav ul').hide();
+    $('#left-catnav h3').click(function () {
+        $(this).children('.q').toggleClass('open');
+        $(this).next().stop().toggle(200);
+    });
 });

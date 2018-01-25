@@ -7,26 +7,25 @@
     // });
 
     //菜单栏
-    function initMenu() {
-        $('#MENU ul').hide();
-        $('#MENU .B').show();
-        $('#MENU h3').click(
-        function() {
-            var checkElement = $(this).next();
-            if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-                return false;
-            }
-            if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-                $('#MENU ul:visible').slideUp('normal');
-                checkElement.slideDown('normal');
-                return false;
-            }
-        }
-    )};
-    $(document).ready(function() {initMenu();});
+    $('#MENU ul').hide();
+    // $('#MENU .B').show();
+    $('#MENU h3').click(function () {
+        $(this).children('.q').toggleClass('open');
+        $(this).next().toggle(200);
+    });
 
     //地址
-    // $('#box .more').click(function () {
-    //     $('#box .brands div').css('display', 'block');
-    // });
+    // console.log($('#more01').html());
+    $('#more01').toggle(
+        function () {
+            // console.log(1);
+            $('#hidden .trouble').css('display', 'block');
+            $('#more01').html("收起");
+            // console.log($('#hidden').html());
+        },
+        function () {
+            $('#hidden .trouble').css('display', 'none');
+            $('#more01').html("更多");
+        }
+    );
 })(jQuery);
