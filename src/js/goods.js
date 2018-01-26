@@ -15,7 +15,23 @@ $(function ($) {
         data:{"goodsId":JSON.parse(getCookie("goods")).id},
         success:function (data) {
             showgoodsList(data);
-            console.log(getCookie("goods"));
+            magnifier();
+            // console.log(typeof JSON.parse(getCookie("goods")));
+            $('#btnBuy').click(function () {
+                $.ajax({
+                    type:"get",
+                    url:"php/addShoppingCart.php",
+                    data:{
+                        "vipName":getCookie("name"),
+                        "goodsId":JSON.parse(getCookie("goods")).id,
+                        "goodsCount":"1"
+                    },
+                    success:function (data) {
+                        console.log(data);
+                    },
+                    dataType:"json"
+                });
+            });
         },
         dataType:"json"
     });
@@ -802,5 +818,59 @@ $(function ($) {
 
             $ulbox.append(str);
         //  }
+   }
+
+   function magnifier() {
+        let oEnlargeBag = document.getElementById('enlarge-bag');
+        let oEnlargeBox= document.getElementById('enlarge-box');
+        let oSmallBox  = document.getElementById('small-box');
+        let aSmallImg  = Array.from(oSmallBox.children);
+        let oMiddleImg = document.getElementById('middle-img');
+        let oLargeBox  = document.getElementById('large-box');
+        let oLargeImg  = document.getElementById('large-img');
+        let oMiddleBox = document.getElementById('middle-box');
+        let oShadow    = document.getElementById('shadow-s');
+        // 选项开效果
+        aSmallImg.forEach((v) => {
+            v.addEventListener('mouseenter', (() => {
+                aSmallImg.forEach((m) => {
+                    m.className = '';
+                });
+                v.className = 'focus';
+                oMiddleImg.src = v.src;
+                oLargeImg.src  = v.src;
+            }).bind(v));
+        });
+        // 放大镜效果
+        let iMaxL = oMiddleBox.offsetWidth  - oShadow.offsetWidth;
+        let iMaxT = oMiddleBox.offsetHeight - oShadow.offsetHeight;
+        oMiddleBox.addEventListener('mousemove', (event) => {
+            let e = event || window.event;
+            let iL = e.pageX - oMiddleBox.offsetLeft - oShadow.offsetWidth / 2;
+            let iT = e.pageY - oMiddleBox.offsetTop  - oShadow.offsetHeight / 2;
+
+            iL = Math.max(iL , 0);
+            iT = Math.max(iT , 0);
+            iL = Math.min(iL , iMaxL);
+            iT = Math.min(iT, iMaxT);
+            // 大图移动的距离和遮罩层移动的距离的比例关系
+            // iShadowCurL / iShadowMaxL = iImgCurL / iImgMaxL
+            // 遮罩层可以动的最大值/放大图可移动的最大值=遮罩层移动的距离/放大图移动的距离
+            let iBigImgL = iL * (oLargeImg.offsetWidth - oLargeBox.offsetWidth) / iMaxL;
+            let iBigImgT = iT * (oLargeImg.offsetHeight - oLargeBox.offsetHeight) / iMaxT;
+
+            oShadow.style.left = iL + "px";
+            oShadow.style.top  = iT + "px";
+
+            oLargeImg.style.left = -iBigImgL + "px";
+            oLargeImg.style.top  = -iBigImgT + "px";
+        });
+        oMiddleBox.addEventListener('mouseenter', () => {
+            oLargeBox.style.display = 'block';
+        });
+        oMiddleBox.addEventListener('mouseleave', () => {
+            oShadow.style.left = '-1000px';
+            oLargeBox.style.display = 'none';
+        });
    }
 });

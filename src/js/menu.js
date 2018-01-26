@@ -26,6 +26,7 @@
         function () {
             $('#hidden .trouble').css('display', 'none');
             $('#more01').html("更多");
+            // console.log( $('#hidden .trouble').html())
         }
     );
 })(jQuery);

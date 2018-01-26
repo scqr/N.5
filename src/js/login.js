@@ -205,6 +205,7 @@ $(function ($) {
             $('#tip_code').text("验证码不正确，请重新输入！").addClass('reg_errmsg');
         }
     });
+    var login = true;
     $("#Image").on('click', () => {
         $.ajax({
            type:"POST",
@@ -215,9 +216,12 @@ $(function ($) {
            },
             success:function (t) {
                 if(t == "1"){
+                    login = true;
                     //保存cookie
-                    location.href = "../index.html";
+                    setCookie('name', $('#grand').val(), 7, '/');
+                    location.href = "index.html";
                 }else{
+                    login = false;
                     $("#txtPassword").html("用户名或者密码错误，请您重新输入！");
                 }
             }

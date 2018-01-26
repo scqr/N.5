@@ -1,5 +1,8 @@
 $(function ($) {
     $.noConflict();
+
+    getCookie('name');
+
     var 
         oAccount = $('.account'),
         oMe      = $('.top ul'),
