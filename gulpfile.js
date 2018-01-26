@@ -23,11 +23,11 @@ gulp.task('sass', function () {
 
 gulp.task("minify", () =>{
     gulp.src("./src/js/*.js")
-        .pipe(minify({
-        mangle: {
-            keepClassName: true
-        }
-    }))
+    //     .pipe(minify({
+    //     mangle: {
+    //         keepClassName: true
+    //     }
+    // }))
   .pipe(gulp.dest("./dist/js/"));
 });
 
@@ -57,10 +57,10 @@ gulp.task('html', ['sass', 'copy-jpg', 'minify', 'copy-php', 'copy-html'], funct
 // 监听
 gulp.task('default', ['sass', 'copy-jpg', 'minify', 'copy-php', 'copy-html'], function () {
     // 开启服务器
-    connect.server({
-        port: 9001,
-        livereload: true
-    });
+    // connect.server({
+    //     port: 9001,
+    //     livereload: true
+    // });
     gulp.watch('./img/*.jpg', ['html']);
     gulp.watch('./src/sass/*.scss', ['html']);
     gulp.watch('./src/js/*.js', ['html']);
