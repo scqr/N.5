@@ -20,9 +20,9 @@
 
     //三、响应
     if($rows == 0){
-        // echo "0";
+        echo "0";
     }else{
         echo "1";
-        header("Location:../index.html");
+        // header("Location:../index.html");
     }
 ?>

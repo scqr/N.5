@@ -1,1 +1,36 @@
-(function(a){function b(b){let c=a("#ulbox");for(let a,d=0;d<b.length;d++)a="<div class='detail_demo' data-id="+b[d].goodsId+"><a href='goods.html'><img src='"+b[d].goodsImg+"' width='200' height='200' /></a><a href='javascript:;' class='word'>"+b[d].goodsDesc+"</a><i>\uFFE5"+b[d].goodsPrice+"<span>"+b[d].beiyong1+"</span></i><p><a class='red' href='javascript:;'>"+b[d].beiyong2+"</a><a class='nothing' href='javascript:;'>"+b[d].beiyong3+"</a></p></div>",c.append(a)}a.ajax({type:"get",url:"php/getGoodsList.php",success:function(a){b(a);for(var c=document.getElementsByClassName("detail_demo"),d=0;d<c.length;d++)c[d].onclick=function(){console.log(1);var a=this.getAttribute("data-id");setCookie("goods",JSON.stringify({id:a}),7,"/")}},dataType:"json"})})(jQuery);
+(function ($) {
+    // $.noConflict();
+
+    $.ajax({
+        type:"get",
+        url:"php/getGoodsList.php",
+        success:function (data) {
+            showgoodsList(data);
+            var oGoodsDiv = document.getElementsByClassName('detail_demo');
+            // console.log(oGoodsDiv);
+            for(var i = 0;i < oGoodsDiv.length;i++){
+                oGoodsDiv[i].onclick = function(){
+                    console.log(1)
+                    var iId = this.getAttribute('data-id');
+
+                    var oGoods = {
+                        id : iId
+                    }
+
+                    setCookie('goods',JSON.stringify(oGoods),7,'/');
+                }
+            }
+        },
+        dataType:"json"
+    });
+
+    function showgoodsList(datas) {
+        let $ulbox = $("#ulbox");
+        for(let i=0;i<datas.length;i++){
+            let str = "<div class='detail_demo' data-id="+datas[i].goodsId+"><a href='goods.html'><img src='"+datas[i].goodsImg+"' width='200' height='200' /></a><a href='javascript:;' class='word'>"+datas[i].goodsDesc+"</a><i>￥"+datas[i].goodsPrice+"<span>"+datas[i].beiyong1+"</span></i><p><a class='red' href='javascript:;'>"+datas[i].beiyong2+"</a><a class='nothing' href='javascript:;'>"+datas[i].beiyong3+"</a></p></div>";
+
+            $ulbox.append(str);
+        }
+    }
+
+})(jQuery);

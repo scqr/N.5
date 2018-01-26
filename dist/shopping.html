@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车</title>
     <link rel="stylesheet" href="css/shopping.css"/>
-    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
-    <script src="js/shopping.js"></script>
     <link rel="icon" href="img/icon.gif" type="image/gif"/>
 </head>
 <body>
@@ -55,7 +53,7 @@
             <form name="frmcart" style="margin:0;">
                 <input type="hidden" name="act" value="upd"/>
                 <table id="tbShoppingList" cellspacing="0" border="0" width="948">
-                    <tbody>
+                    <tbody id="tbody">
                         <tr class="cart-tip">
                             <td width="36" height="33">序号</td>
                             <td width="554" height="33">商品名</td>
@@ -67,7 +65,7 @@
                             <td width="70">转入收藏夹</td>
                             <td width="45">删除</td>
                         </tr>
-                        <tr id="record_6053672" class="gray-border">
+                        <!-- <tr id="record_6053672" class="gray-border">
                             <td width="36" height="30">
                                 <input type="hidden" name="productid_1"/>1
                             </td>
@@ -118,7 +116,7 @@
                             <td width="45">
                                 <a id="btnDel_6053671" href="javascript:delpro(21874,10,6053671);">删除</a>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </form>
@@ -295,3 +293,8 @@
     </div>
 </body>
 </html>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/shopping.js"></script>

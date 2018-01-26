@@ -1,15 +1,56 @@
-$(function(a){function b(b){let c=a('#enlarge-bag'),d=`<div class="enlarge_left" id="enlarge-box">
+$(function ($) {
+    $.noConflict();
+
+    //菜单栏
+    $('#left-catnav ul').hide();
+    $('#left-catnav h3').click(function () {
+        $(this).children('.q').toggleClass('open');
+        $(this).next().stop().toggle(200);
+    });
+
+    //放大镜获取
+    $.ajax({
+        type:"get",
+        url:"php/getGoodsInfo.php",
+        data:{"goodsId":JSON.parse(getCookie("goods")).id},
+        success:function (data) {
+            showgoodsList(data);
+            magnifier();
+            // console.log(typeof JSON.parse(getCookie("goods")));
+            $('#btnBuy').click(function () {
+                $.ajax({
+                    type:"get",
+                    url:"php/addShoppingCart.php",
+                    data:{
+                        "vipName":getCookie("name"),
+                        "goodsId":JSON.parse(getCookie("goods")).id,
+                        "goodsCount":"1"
+                    },
+                    success:function (data) {
+                        console.log(data);
+                    },
+                    dataType:"json"
+                });
+            });
+        },
+        dataType:"json"
+    });
+    
+    function showgoodsList(datas) {
+        let $ulbox = $("#enlarge-bag");
+        // for(let i=0;i<datas.length;i++){
+            let str = `<div class="enlarge_left" id="enlarge-box">
             <div id="small-box" class="normal">
-                <img class="focus" src="${b.beiyong4}" width="72" height="72" />
-                <img src="${b.beiyong5}" width="72" height="72" />
-                <img src="${b.beiyong6}" width="72" height="72" />
+                <img class="focus" src="${datas.beiyong4}" width="72" height="72" />
+                <img src="${datas.beiyong5}" width="72" height="72" />
+                <img src="${datas.beiyong6}" width="72" height="72" />
             </div>
             <div class="enlarge_box" id="middle-box">
                 <div class="shadow" id="shadow-s"></div>
-                <img src="${b.beiyong4}" width="350" height="350" id="middle-img" />
+                <img src="${datas.beiyong4}" width="350" height="350" id="middle-img" />
             </div>
             <div class="enlarge_big" id="large-box" style="display:none;">
-                <img src="${b.beiyong4}" width="800" height="800" id="large-img" />
+                <img src="${datas.beiyong4}" width="800" height="800" id="large-img" />
             </div>
             <p class="datu">
                 <img src="img/datu.jpg" width="15" height="15"/>
@@ -27,18 +68,18 @@ $(function(a){function b(b){let c=a('#enlarge-bag'),d=`<div class="enlarge_left"
         </div>
         <div class="enlarge_right">
             <h2>
-                ${b.goodsDesc}
-                <span class="subTit">${b.beiyong7}</span>
+                ${datas.goodsDesc}
+                <span class="subTit">${datas.beiyong7}</span>
             </h2>
             <div class="cppro">
                 <div class="pro_name">英文名称：</div>
-                <div class="n_neir">${b.beiyong8}</div>
-                <div class="pro_name">商品编号：</div><div class="n_neir">${b.beiyong9}</div>
+                <div class="n_neir">${datas.beiyong8}</div>
+                <div class="pro_name">商品编号：</div><div class="n_neir">${datas.beiyong9}</div>
                 <div class="pro_name">No5&nbsp;&nbsp;&nbsp;价：</div>
                 <div class="n_neir">
-                    <span class="prodRedTxt price" style="margin-left:0px;">￥${b.goodsPrice}</span>
-                    <span class="prodTxt1">市场价： ￥${b.beiyong10}</span>
-                    <span id="rebate" class="prodTxt1">折扣：${b.beiyong1}</span>
+                    <span class="prodRedTxt price" style="margin-left:0px;">￥${datas.goodsPrice}</span>
+                    <span class="prodTxt1">市场价： ￥${datas.beiyong10}</span>
+                    <span id="rebate" class="prodTxt1">折扣：${datas.beiyong1}</span>
                 </div>
                 <div id="sPriNM" class="pro_name" style="display: none;">：</div>
                 <div id="sPriVL" class="n_neir" style="display: none;">￥</div>
@@ -771,4 +812,65 @@ $(function(a){function b(b){let c=a('#enlarge-bag'),d=`<div class="enlarge_left"
                 </div>
                 <div class="clear"></div>
             </div>
-        </div>`;c.append(d)}a.noConflict(),a('#left-catnav ul').hide(),a('#left-catnav h3').click(function(){a(this).children('.q').toggleClass('open'),a(this).next().stop().toggle(200)}),a.ajax({type:'get',url:'php/getGoodsInfo.php',data:{goodsId:JSON.parse(getCookie('goods')).id},success:function(a){b(a),console.log(getCookie('goods'))},dataType:'json'})});
+        </div>`;
+
+            
+
+            $ulbox.append(str);
+        //  }
+   }
+
+   function magnifier() {
+        let oEnlargeBag = document.getElementById('enlarge-bag');
+        let oEnlargeBox= document.getElementById('enlarge-box');
+        let oSmallBox  = document.getElementById('small-box');
+        let aSmallImg  = Array.from(oSmallBox.children);
+        let oMiddleImg = document.getElementById('middle-img');
+        let oLargeBox  = document.getElementById('large-box');
+        let oLargeImg  = document.getElementById('large-img');
+        let oMiddleBox = document.getElementById('middle-box');
+        let oShadow    = document.getElementById('shadow-s');
+        // 选项开效果
+        aSmallImg.forEach((v) => {
+            v.addEventListener('mouseenter', (() => {
+                aSmallImg.forEach((m) => {
+                    m.className = '';
+                });
+                v.className = 'focus';
+                oMiddleImg.src = v.src;
+                oLargeImg.src  = v.src;
+            }).bind(v));
+        });
+        // 放大镜效果
+        let iMaxL = oMiddleBox.offsetWidth  - oShadow.offsetWidth;
+        let iMaxT = oMiddleBox.offsetHeight - oShadow.offsetHeight;
+        oMiddleBox.addEventListener('mousemove', (event) => {
+            let e = event || window.event;
+            let iL = e.pageX - oMiddleBox.offsetLeft - oShadow.offsetWidth / 2;
+            let iT = e.pageY - oMiddleBox.offsetTop  - oShadow.offsetHeight / 2;
+
+            iL = Math.max(iL , 0);
+            iT = Math.max(iT , 0);
+            iL = Math.min(iL , iMaxL);
+            iT = Math.min(iT, iMaxT);
+            // 大图移动的距离和遮罩层移动的距离的比例关系
+            // iShadowCurL / iShadowMaxL = iImgCurL / iImgMaxL
+            // 遮罩层可以动的最大值/放大图可移动的最大值=遮罩层移动的距离/放大图移动的距离
+            let iBigImgL = iL * (oLargeImg.offsetWidth - oLargeBox.offsetWidth) / iMaxL;
+            let iBigImgT = iT * (oLargeImg.offsetHeight - oLargeBox.offsetHeight) / iMaxT;
+
+            oShadow.style.left = iL + "px";
+            oShadow.style.top  = iT + "px";
+
+            oLargeImg.style.left = -iBigImgL + "px";
+            oLargeImg.style.top  = -iBigImgT + "px";
+        });
+        oMiddleBox.addEventListener('mouseenter', () => {
+            oLargeBox.style.display = 'block';
+        });
+        oMiddleBox.addEventListener('mouseleave', () => {
+            oShadow.style.left = '-1000px';
+            oLargeBox.style.display = 'none';
+        });
+   }
+});
