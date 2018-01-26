@@ -1,0 +1,113 @@
+.success{
+    width:100%;
+    overflow:hidden;
+    .gray_border_box {
+        border: 1px solid #C6E6F3;
+        margin-top: 10px;
+        margin-left:12%;
+        padding: 10px;
+        text-align: left;
+        width: 958px;
+        float: left;
+        .reg-box {
+            width: 671px;
+            margin-right: auto;
+            margin-left: auto;
+            .regcom-tit {
+                height: 56px;
+                width: 671px;
+                background-image: url(../img/reg-bg.png);
+                background-repeat: no-repeat;
+                background-position: -162px -240px;
+                margin-bottom: 20px;
+                margin-top: 40px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .regcom-tips {
+                font-size: 12px;
+                line-height: 18px;
+                text-align: center;
+                /* padding-top: 8px; */
+                padding-bottom: 8px;
+                .user {
+                    font-family: Arial;
+                    font-size: 12px;
+                    color: #02BEFD;
+                    margin-right: 3px;
+                    margin-left: 3px;
+                }
+                .user-email {
+                    font-family: Arial;
+                    font-size: 12px;
+                    color: #00CAFE;
+                    margin-right: 3px;
+                    margin-left: 3px;
+                }
+                ul{
+                    margin: 0px;
+                    text-align: center;
+                    padding-top: 0px;
+                    padding-right: 0px;
+                    padding-bottom: 0px;
+                    padding-left: 155px;
+                    li{
+                        float: left;
+                        display: block;
+                        height: 25px;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                        list-style-type: none;
+                        font-size: 12px;
+                        line-height: 25px;
+                        a{
+                            &:visited {
+                                color: #0080FF;
+                            }
+                            &:link {
+                                color: #0080FF;
+                                text-decoration: none;
+                            }
+                            &:hover{
+                                color: #FF9900;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            .single-reg-fbg {
+                height: 3px;
+                width: 671px;
+                background-image: url(../img/reg-bg.png);
+                background-repeat: no-repeat;
+                background-position: -161px -435px;
+                margin-bottom: 40px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 18px;
+            }
+            #per-info {
+                height: 42px;
+                width: 179px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 25px;
+                margin-bottom: 20px;
+                a{
+                    &:visited {
+                        color: #0080FF;
+                    }
+                    &:link {
+                        color: #0080FF;
+                        text-decoration: none;
+                    }
+                    img{
+                        vertical-align: top;
+                        border: 0 none;
+                    }
+                }
+            }
+        }
+    }
+}
