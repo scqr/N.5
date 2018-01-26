@@ -6,20 +6,28 @@
         url:"php/getGoodsList.php",
         success:function (data) {
             showgoodsList(data);
+            var oGoodsDiv = document.getElementsByClassName('detail_demo');
+            // console.log(oGoodsDiv);
+            for(var i = 0;i < oGoodsDiv.length;i++){
+                oGoodsDiv[i].onclick = function(){
+                    console.log(1)
+                    var iId = this.getAttribute('data-id');
+
+                    var oGoods = {
+                        id : iId
+                    }
+
+                    setCookie('goods',JSON.stringify(oGoods),7,'/');
+                }
+            }
         },
         dataType:"json"
     });
 
-    
     function showgoodsList(datas) {
         let $ulbox = $("#ulbox");
         for(let i=0;i<datas.length;i++){
-            //1、创建li
-            // let str="<li><p>商品编号："+datas[i].goodsId+"</p>" +
-            //     "<p>商品名称："+datas[i].goodsName+"</p>" +
-            //     "<p>商品价格："+datas[i].goodsPrice+"</p>" +
-            //     "<p>商品图片：<img style='width:100px' src='"+datas[i].goodsImg+"'/></p></li>";
-            let str = "<div class='detail_demo'><a href='javascript:;'><img src='"+datas[i].goodsImg+"' width='200' height='200' /></a><a href='javascript:;' class='word'>"+datas[i].goodsDesc+"</a><i>￥"+datas[i].goodsPrice+"<span>"+datas[i].beiyong1+"</span></i><p><a class='red' href='javascript:;'>"+datas[i].beiyong2+"</a><a class='nothing' href='javascript:;'>"+datas[i].beiyong3+"</a></p></div>";
+            let str = "<div class='detail_demo' data-id="+datas[i].goodsId+"><a href='goods.html'><img src='"+datas[i].goodsImg+"' width='200' height='200' /></a><a href='javascript:;' class='word'>"+datas[i].goodsDesc+"</a><i>￥"+datas[i].goodsPrice+"<span>"+datas[i].beiyong1+"</span></i><p><a class='red' href='javascript:;'>"+datas[i].beiyong2+"</a><a class='nothing' href='javascript:;'>"+datas[i].beiyong3+"</a></p></div>";
 
             $ulbox.append(str);
         }

@@ -1,5 +1,5 @@
 //放大镜
-window.onload = function () {
+// window.onload = function () {
     var oEnlargeBag = document.getElementById('enlarge-bag');
     var oEnlargeBox= document.getElementById('enlarge-box');
     var oSmallBox  = document.getElementById('small-box');
@@ -55,4 +55,4 @@ window.onload = function () {
         oShadow.style.left = '-1000px';
         oLargeBox.style.display = 'none';
     });
-};
+// };
