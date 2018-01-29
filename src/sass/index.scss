@@ -157,6 +157,16 @@ $Twelve:12px;
             position:relative;
             float:left;
             width:650px;
+            #list{
+                margin:0 auto;
+                width:600px;
+            }
+            #list li{
+                padding:0 10px;
+                line-height: 30px;
+                background:#eee;
+                border-bottom: 1px dashed greenyellow;
+            }
             .search-frame{
                 position:relative;
                 margin-top:22px;

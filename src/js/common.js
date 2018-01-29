@@ -56,10 +56,9 @@ $(function ($) {
         }, function () {
             oNo.css('display', 'none');
         });
-        // var sInput = oInput.value;
-        // oNo.on('click', function () {
-        //     sInput = '';
-        // });
+
+        //搜索框跨域
+        
 
         //二维码
         oCode.on('mouseenter', function () {

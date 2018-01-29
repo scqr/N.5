@@ -27,9 +27,10 @@
     function showgoodsList(datas) {
         let $ulbox = $("#ulbox");
         for(let i=0;i<datas.length;i++){
-            let str = "<div class='detail_demo' data-id="+datas[i].goodsId+"><a href='goods.html'><img src='"+datas[i].goodsImg+"' width='200' height='200' /></a><a href='javascript:;' class='word'>"+datas[i].goodsDesc+"</a><i>￥"+datas[i].goodsPrice+"<span>"+datas[i].beiyong1+"</span></i><p><a class='red' href='javascript:;'>"+datas[i].beiyong2+"</a><a class='nothing' href='javascript:;'>"+datas[i].beiyong3+"</a></p></div>";
+            let str = "<div class='detail_demo' data-id="+datas[i].goodsId+"><a target='_blank' class='a' href='goods.html'><img src='"+datas[i].goodsImg+"' width='200' height='200' /></a><a href='javascript:;' class='word'>"+datas[i].goodsDesc+"</a><i>￥"+datas[i].goodsPrice+"<span>"+datas[i].beiyong1+"</span></i><p><a class='red' href='javascript:;'>"+datas[i].beiyong2+"</a><a class='nothing' href='javascript:;'>"+datas[i].beiyong3+"</a></p></div>";
 
             $ulbox.append(str);
+            console.log('a');
         }
     }
 
