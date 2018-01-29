@@ -23,11 +23,11 @@ gulp.task('sass', function () {
 
 gulp.task("minify", () =>{
     gulp.src("./src/js/*.js")
-    //     .pipe(minify({
-    //     mangle: {
-    //         keepClassName: true
-    //     }
-    // }))
+        .pipe(minify({
+        mangle: {
+            keepClassName: true
+        }
+    }))
   .pipe(gulp.dest("./dist/js/"));
 });
 
